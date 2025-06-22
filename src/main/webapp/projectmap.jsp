@@ -13,6 +13,8 @@
         </div>
         <div class="col-md-4 content-first">
             <p>Youth-led nature recovery in the UK. </p>
+             <a type="button" class="btn btn-primary" href="projects.jsp">List View</a>
+           <a type="button" class="btn btn-primary" href="projectmap.jsp">Map View</a>
                     <p>
                         We accelerate UK nature recovery and centre young people in the process and the movement.
                         
@@ -57,7 +59,36 @@
 
  <script>
         // Initialize and add the map
+                initMap();
         let map;
+            var container;
+            var PRODUCT_CONTENT_TYPE_ID;
+            var contentfulClient;
+            $(document).ready()
+            {
+
+
+                contentfulClient = contentful.createClient({
+                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
+                    space: 'y0hkcnou78kd'
+                });
+
+                PRODUCT_CONTENT_TYPE_ID = 'project';
+
+                container = $('#projects'); 
+
+
+
+        
+                
+                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null,null, renderProjects)
+
+
+            }
+            
+          
+
+
 
         async function initMap() {
             // The location of Uluru
@@ -77,12 +108,53 @@
 
            
 
-            $.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vSxJ-WEGsvPSZdeuIybXgI0K_8xr8iVpyrn4Q7tYu0elu8EqYXo7G1J291IPMOdhEHdhC2KZ31z3BaO/pub?output=csv', doSomethingWithData);
-
+            
 
 
         }
-        initMap();
+        function renderProjects(data)
+        {
+             
+           // var locations = [
+           //     ['Bondi Beach', -33.890542, 151.274856, 4],
+           //     ['Coogee Beach', -33.923036, 151.259052, 5],
+           //     ['Cronulla Beach', -34.028249, 151.157507, 3],
+           //     ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+           //     ['Maroubra Beach', -33.950198, 151.259302, 1]
+           // ];
+
+            let mapOptions = {
+                center: new google.maps.LatLng(52.9962192, -1.13358),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+
+            // Moved this line up here
+            this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // changed the "native element" to a standard DOM element for the sake of this example
+
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker, i;
+
+            for (i = 0; i < data.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(data[i].fields.lattitude, data[i].fields.longitude),
+                    map: this.map // You are using this.map here so it needs to be created before
+                });
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(data[i].Popup);
+                        infowindow.open(Map, marker);
+                    }
+                })(marker, i));
+            }
+        
+
+
+        }
+
+
 
         function csvToArr(stringValue) {
             const formattedString = stringValue.trim().replace('\r','').split('\n');

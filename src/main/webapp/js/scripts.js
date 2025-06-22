@@ -24,3 +24,31 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+
+
+function renderContent(client, contenttype, queryfield,queryvalue,order, renderer)
+{
+    
+    const query = {};
+    query.content_type=contenttype;
+    
+    if(order!=null)
+    {
+        query.order = 'fields.' + order;
+    }
+    if(queryfield!=null)
+    {
+        query['fields.' + queryfield] = queryvalue;
+    }
+    client.getEntries({
+        content_type:contenttype
+        //#'fields.colleagueType': '${empty param.colleagueType ? 'Core' : param.colleagueType}',
+        //order: 'fields.ranking'
+    })
+            .then(function (entries) {
+                console.log(entries);
+                container.html(renderer(entries.items));
+            })
+
+}

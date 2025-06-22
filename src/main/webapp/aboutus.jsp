@@ -6,17 +6,7 @@
         <script nonce="" src="js/aboutus.js"></script>
         
         
-        <script
-      src="https://cdn.jsdelivr.net/npm/contentful@7.0.5/dist/contentful.browser.min.js"
-      charset="utf-8"
-    ></script>
-    <script>
-      var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.min.js"
-      charset="utf-8"
-    ></script>
+        
         
     </head>
     <body>
@@ -145,17 +135,24 @@
 
             }
 
-
-            contentfulClient.getEntries({
+            //renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}',null, renderColleagues)
+var object1 = {
                 content_type: PRODUCT_CONTENT_TYPE_ID,
                 'fields.colleagueType': '${empty param.colleagueType ? 'Core' : param.colleagueType}',
                 order:'fields.ranking'
-            })
+            };
+
+            
+
+            
+
+            /*contentfulClient.getEntries(object1)
                     .then(function (entries) {
                         console.log(entries);
                         container.html(renderColleagues(entries.items));
                     })
-
+*/
+renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','ranking', renderColleagues)
 
             function renderColleagues(colleagues) {
                 return '<h1>Colleagues</h1>' +
@@ -185,9 +182,8 @@
             function renderProductHeader(fields) {
                 return '<div class="colleague-info">' +
                         '<p>' +
-                        
-                        documentToHtmlString(fields.background) +
-                        
+                        (fields.background ? documentToHtmlString(fields.background):'')
+                        +
                         '</p>' +
                         
                         '</div>'
