@@ -4,27 +4,23 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id="proj">
         
         <div class="container">
             <div class="row">
-        <div class="col-md-2">
+        
           <%@include  file="includes/leftnav.jsp" %>
-        </div>
-        <div class="col-md-4 content-first">
-            <p>Youth-led nature recovery in the UK. </p>
-             <a type="button" class="btn btn-primary" href="projects.jsp">List View</a>
-           <a type="button" class="btn btn-primary" href="projectmap.jsp">Map View</a>
-                    <p>
-                        We accelerate UK nature recovery and centre young people in the process and the movement.
-                        
-                    </p>
-                    <p>
-                        In the next three years, we want every young person in England and Wales within an hour of a youth-led nature recovery project.
-                    </p>
+        
+        <div id="centre-content"  class="col-md-4 content-first">
+            <p>We work with landowners and partner organisations to facilitate youth-led nature recovery projects across the UK. The management plans we design and implement are premised on the guiding principles of process-based ecological restoration where nature leads the way as much 
+as possible. 
+ </p>
+                        <a type="button" class="btn btn-general" href="projects.jsp">List View</a>
+           <a type="button" class="btn btn-general" href="projectmap.jsp">Map View</a>
+                    
             
         </div>
-        <div class="col-md-6">
+        <div id="right-content" class="col-md-6">
             <div id="map"></div>
             
         </div>
@@ -59,14 +55,18 @@
 
  <script>
         // Initialize and add the map
-                initMap();
+        
+    
+   
+                
+                
         let map;
             var container;
             var PRODUCT_CONTENT_TYPE_ID;
             var contentfulClient;
             $(document).ready()
             {
-
+                 initMap();
 
                 contentfulClient = contentful.createClient({
                     accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',

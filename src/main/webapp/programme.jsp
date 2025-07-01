@@ -4,20 +4,20 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id="programme">
 
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                
                     <%@include  file="includes/leftnav.jsp" %>
-                </div>
-                <div class="col-md-4 content-first">
+                
+                <div id="centre-content"  class="col-md-4 content-first">
                     <p>We run events on our youth-led nature recovery projects across the UK. we aslo run a number of creative programmes and events centred on up-skilling and energising the next generation of environmental stewards under 'Overgrowth'.
                     </p>
 
 
-                    <button>Upcoming</button>    
-                    <button>Past</button>    
+           <a type="button" class="btn btn-general" href="programme.jsp">Upcoming</a>
+           <a type="button" class="btn btn-general" href="programme.jsp">Past</a>
                 </div>
                 <div class="col-md-6">
                     <ul class="faq-list">

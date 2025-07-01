@@ -4,20 +4,22 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id="proj">
         
         <div class="container">
             <div class="row">
-        <div class="col-md-2">
+        
           <%@include  file="includes/leftnav.jsp" %>
-        </div>
-        <div class="col-md-4 content-first">
-            <p>We work with landowners. </p>
+        
+        <div id="centre-content" class="col-md-4 content-first">
+            <p>We work with landowners and partner organisations to facilitate youth-led nature recovery projects across the UK. The management plans we design and implement are premised on the guiding principles of process-based ecological restoration where nature leads the way as much 
+as possible. 
+</p>
                     
-            <a type="button" class="btn btn-primary" href="projects.jsp">List View</a>
-           <a type="button" class="btn btn-primary" href="projectmap.jsp">Map View</a>
+            <a type="button" class="btn btn-general" href="projects.jsp">List View</a>
+           <a type="button" class="btn btn-general" href="projectmap.jsp">Map View</a>
         </div>
-        <div class="col-md-6">
+        <div id="right-content" class="col-md-6">
             
             <div id="projects"></div>
         </div>

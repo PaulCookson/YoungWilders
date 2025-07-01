@@ -4,21 +4,32 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id="vacancy">
         
         <div class="container">
             <div class="row">
-        <div class="col-md-2">
+        
           <%@include  file="includes/leftnav.jsp" %>
-        </div>
-        <div class="col-md-4 content-first">
-            <p>We work with landowners. </p>
+        
+        <div id="centre-content" class="col-md-4 content-first">
+            <p>Youngwilders is a small but growing team, any job opportunities will be posted on this page. We are always interested in hearing from young people looking to enter the sector and are very happy to chat about future careers. 
+                <br><br>
+                Please feel free to get in touch here <br><br></p>
                     
-            <a type="button" class="btn btn-primary" href="projects.jsp">List View</a>
-           <a type="button" class="btn btn-primary" href="projectmap.jsp">Map View</a>
+            <a type="button" class="btn btn-general" href="vacancies.jsp">Visual Lead</a>
+           <a type="button" class="btn btn-general" href="vacancies.jsp">Wild Stewards</a>
         </div>
-        <div class="col-md-6">
-            <div id="map"></div>
+        <div id="right-content" class="col-md-6">
+            <p>
+                Youngwilders are looking for a Visual Lead to document and share the progress of our youth-led nature recovery projects across England and Wales, and to produce content to engage and empower young people in relation to nature recovery.
+                <br><br>
+                HOW TO APPLY<br><br>
+                To apply for this role please email Noah - noah@youngwilders.uk with a short covering letter (less than one page) explaining why you think you would be a good fit for Youngwilders, and with a link to your portfolio of work. 
+ <br><br>
+The deadline for applications is the 14th January, and we will be inviting candidates for interviews in the following two weeks. If you have any questions at all please do get in touch. 
+<br>
+                
+            </p>
             
         </div>
       </div>

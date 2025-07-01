@@ -8,10 +8,10 @@
         
         <div class="container">
             <div class="row">
-        <div class="col-md-2">
+        
           <%@include  file="includes/leftnav.jsp" %>
-        </div>
-        <div class="col-md-4 content-first">
+        
+        <div id="centre-content"  class="col-md-4 content-first">
             <p>Youth-led nature recovery in the UK. </p>
              <a type="button" class="btn btn-primary" href="projects.jsp">List View</a>
            <a type="button" class="btn btn-primary" href="projectmap.jsp">Map View</a>

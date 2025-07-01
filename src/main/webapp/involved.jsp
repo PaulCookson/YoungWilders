@@ -4,17 +4,19 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id="involved">
         
         <div class="container">
             <div class="row">
-        <div class="col-md-2">
+        
           <%@include  file="includes/leftnav.jsp" %>
-        </div>
-        <div class="col-md-4 content-second">
-            <p>Welcome to the Youngwilders netowrk. Please fill in this form, and make sure to check out our programme. </p>
+        
+        <div id="centre-content"  class="col-md-4 content-second">
+            <p>Welcome to the Youngwilders network. Please fill in this form, and make sure to check out our programme. 
+
+</p>
                     <p>
-                        If you're a landowner interested in working with us., please email noah@youngwilders.uk
+                        If you're a landowner interested in working with us, please email noah@youngwilders.uk.
                         
                     </p>
                     
