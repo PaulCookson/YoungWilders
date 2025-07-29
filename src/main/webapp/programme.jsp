@@ -8,112 +8,146 @@
 
         <div class="container">
             <div class="row">
-                
-                    <%@include  file="includes/leftnav.jsp" %>
-                
+
+                <%@include  file="includes/leftnav.jsp" %>
+
                 <div id="centre-content"  class="col-md-4 content-first">
-                    <p>We run events on our youth-led nature recovery projects across the UK. we aslo run a number of creative programmes and events centred on up-skilling and energising the next generation of environmental stewards under 'Overgrowth'.
+                    <p>We run events on our youth-led nature recovery projects across the UK. we also run a number of creative programmes and events centred on up-skilling and energising the next generation of environmental stewards under 'Overgrowth'.
                     </p>
 
-
-           <a type="button" class="btn btn-general" href="programme.jsp">Upcoming</a>
-           <a type="button" class="btn btn-general" href="programme.jsp">Past</a>
+                    <div class="button_group">
+                        <a type="button" class="btn btn-general" href="programme.jsp">Upcoming</a>
+                        <a type="button" class="btn btn-general" href="programme.jsp">Past</a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <ul class="faq-list">
+                <div id="right-content" class="col-md-6">
+                    
+                    <div id="programmes">
+                        
+                        
+                    </div>
+                    <%--
+                    <ul class="faq-list" style="list-style-type:none;padding-left: 0">
 
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Rye Meadow <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                
-              </p>
-            </div>
-          </li>
+                        <li class="programme-item">
+                        <div class="row">
+                            <div class="programme-item-col" style="width:200px;">
+                                Rye Meadow 
+                                
+                            </div>
+                            <div class="programme-item-col" style="width:200px;">
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Hedgeburary <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                
-              </p>
-            </div>
-          </li>
+                                Rye, East Sussex
+                                
+                            </div>
+                            <div class="programme-item-col" style="width:170px;">
+                                10.02.2024
+                                
+                            </div>
+                            
+                            <div data-bs-toggle="collapse" class="programme-item-col collapsed question" href="#faq1" style="width:10px">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq1" class="collapse row" data-bs-parent=".faq-list" style="margin-top:10px">
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Grovember <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                
-              </p>
-            </div>
-          </li>
+                                <div class="col-md-6">
+                                    <p>
+                                        OVERVIEW: Beginning in 2020, Rye Meadow marked our first ever project. It involves the creation of 2 acres of native wildflower meadow that should see its first major bloom in Spring 2023. 
+                                        Rye Meadow's status as our first ever project has ensured it a special place in our collective heart. It's also situated in a phenomenally beautiful part of the country, the High Weald, and is framed by vineyards and old hedgerows. The Sussex Lund Grant Program has supported our work throughout, and helped us conduct the necessary mowing and sowing, as well as provided guidance on seed mixes for the local area.
 
-         
-        </ul>
+                                    </p>
+                                </div>
+                                <div  class="col-md-6">
+                                    <img style="width:100%" src="./assets/programme.png">   
+                                </div>
 
+                            </div>
+                        </div>
+                        </li>
+
+                        
+
+
+                    </ul>
+                    --%>
                 </div>
             </div>
 
 
         </div>    
 
-        <%--
-        <div class="d-flex" id="wrapper">
-            
-          
-            
-            <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
-                <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">Action</a>
-                                        <a class="dropdown-item" href="#!">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#!">Something else here</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <!-- Page content-->
-                <div class="container-fluid content-first">
-                    
-                    <p>Youth-led nature recovery in the UK. </p>
-                    <p>
-                        We accelerate UK nature recovery and centre young people in the process and the movement.
-                        
-                    </p>
-                    <p>
-                        In the next three years, we want every young person in England and Wales within an hour of a youth-led nature recovery project.
-                    </p>
-                </div>
-                <div class="container-fluid ">
-                    
-                    <p>Youth-led nature recovery in the UK. </p>
-                    <p>
-                        We accelerate UK nature recovery and centre young people in the process and the movement.
-                        
-                    </p>
-                    <p>
-                        In the next three years, we want every young person in England and Wales within an hour of a youth-led nature recovery project.
-                    </p>
-                </div>
-            </div>
-        </div>
-        --%>
+      
 
+             <script>
+            var container;
+            var PRODUCT_CONTENT_TYPE_ID;
+            var contentfulClient;
+            
+            function renderProgrammes(programmes) {
+                return '' +
+                        '<ul class="faq-list" style="list-style-type:none;padding-left: 0">' +
+                        programmes.map(renderSingleProgramme).join('\n') +
+                        '</ul>';
+                
+                
+                
+            }
+            function renderSingleProgramme(programme, index)
+            {
+                var fields = programme.fields
+                return '<li class="programme-item">' +
+                        '<div class="row">' +
+                            '<div class="programme-item-col" style="width:300px;">' + 
+                                fields.programmeName + 
+                                
+                            '</div>' +
+                            '<div class="programme-item-col" style="width:240px;">' +
+
+                                fields.programmeLocation +
+                                
+                            '</div>' +
+                            '<div class="programme-item-col" style="width:70px;">' +
+                                 '' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-us') +
+                                
+                            '</div>' +
+
+                            '<div data-bs-toggle="collapse" class="programme-item-col question collapsed" href="#faq' + index + '" style="width:10px" aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
+                            '<div id="faq' + index + '" class="programme-item-detail row collapse" data-bs-parent=".faq-list" style="margin-top: 10px;">' +
+
+                             '   <div class="col-md-6">' +
+                             
+                                 documentToHtmlString(fields.programmeOverview) +
+
+                              
+                                '</div>' +
+                                '<div class="col-md-6">' +
+                                '    <img style="width:100%" src="./assets/programme.png">   ' +
+                                '</div>' +
+
+                            '</div>' +
+                        '</div>' +
+                        '</li>'
+                
+            }
+            $(document).ready()
+            {
+
+
+                contentfulClient = contentful.createClient({
+                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
+                    space: 'y0hkcnou78kd'
+                });
+
+                PRODUCT_CONTENT_TYPE_ID = 'programme';
+
+                container = $('#programmes'); 
+
+                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null,null,null, renderProgrammes)
+
+
+            }
+            
+            </script>
+        
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

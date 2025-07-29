@@ -15,9 +15,11 @@
             <p>We work with landowners and partner organisations to facilitate youth-led nature recovery projects across the UK. The management plans we design and implement are premised on the guiding principles of process-based ecological restoration where nature leads the way as much 
 as possible. 
  </p>
-                        <a type="button" class="btn btn-general" href="projects.jsp">List View</a>
+              <div style="margin-left:30px;margin-top:30px">
+            <a type="button" class="btn btn-general" href="projects.jsp">List View</a>
            <a type="button" class="btn btn-general" href="projectmap.jsp">Map View</a>
-                    
+           
+</div>  
             
         </div>
         <div id="right-content" class="col-md-6">
@@ -34,24 +36,7 @@ as possible. 
 
         
         <!-- prettier-ignore -->
-        <script>(g => {
-                var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window;
-                b = b[c] || (b[c] = {});
-                var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async(f, n) => {
-                        await (a = m.createElement("script"));
-                        e.set("libraries", [...r] + "");
-                        for (k in g)
-                            e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
-                        e.set("callback", c + ".maps." + q);
-                        a.src = `https://maps.googleapis.com/maps/api/js?` + e;
-                        d[q] = f;
-                        a.onerror = () => h = n(Error(p + " could not load."));
-                        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-                        m.head.append(a)
-                    }));
-                d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
-            })
-                    ({key: "AIzaSyBxol2BCz3gtSPa1Ig5Zs0sx23kmq2Qfnw", v: "weekly"});</script>
+        <script></script>
 
  <script>
         // Initialize and add the map
@@ -66,23 +51,9 @@ as possible. 
             var contentfulClient;
             $(document).ready()
             {
-                 initMap();
+                 
 
-                contentfulClient = contentful.createClient({
-                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
-                    space: 'y0hkcnou78kd'
-                });
-
-                PRODUCT_CONTENT_TYPE_ID = 'project';
-
-                container = $('#projects'); 
-
-
-
-        
                 
-                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null,null, renderProjects)
-
 
             }
             
@@ -101,12 +72,26 @@ as possible. 
 
             // The map, centered at Uluru
             map = new Map(document.getElementById("map"), {
-                zoom: 4,
+                zoom: 5,
                 center: position,
-                mapId: "DEMO_MAP_ID",
+                mapId: "9ce55e254766827ef36bbc9f",
             });
 
            
+           contentfulClient = contentful.createClient({
+                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
+                    space: 'y0hkcnou78kd'
+                });
+
+                PRODUCT_CONTENT_TYPE_ID = 'project';
+
+                container = $('#projects'); 
+
+
+
+        
+                
+                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null,null, renderProjects)
 
             
 
@@ -125,8 +110,9 @@ as possible. 
 
             let mapOptions = {
                 center: new google.maps.LatLng(52.9962192, -1.13358),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                zoom: 6,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapId: '9ce55e254766827ef36bbc9f'
             }
 
             // Moved this line up here
@@ -247,6 +233,9 @@ as possible. 
 
 
     </script>  
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxol2BCz3gtSPa1Ig5Zs0sx23kmq2Qfnw&loading=async&callback=initMap">
+    </script>
     
     
             <!-- Bootstrap core JS-->

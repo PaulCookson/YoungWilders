@@ -15,8 +15,14 @@ body{
     background: #000000;
     width:1440px;margin:auto 
 }
+.button_group{margin-left:30px;margin-top:30px}
+
+#centre-content{padding-left:0px;padding-right:0px}
+
 #centre-content p {font-size:1.2rem;line-height:25px;margin:25px 30px 0px 30px }
 #right-content p {margin-left:30px;margin-top:30px;margin-right:30px}
+
+
 #menu .btn {width:120px;height:30px;margin:20px 30px 0px 30px}
 #menu .btn-first {width:120px;height:30px;margin:30px 30px 0px 30px}
 
@@ -24,25 +30,38 @@ body{
 #second-menu p {margin-bottom:5px;font-weight:700;text-transform: uppercase;}
 #second-menu p a{text-decoration:none;font-weight:normal;color:black;text-transform: none;}
 
-#vacancy #right-content {background: #D9D9D9}
+#involved #right-content, #aboutus #right-content,#vacancy #right-content,#programme #right-content,#proj #right-content,#involved #right-content {background: #D9D9D9}
 
 #aboutus #centre-content {background: #847DAC;}
-#aboutus #right-content {background: #D9D9D9;}
-#proj #right-content {background: #D9D9D9;}
-
-
 #programme #centre-content {background:#765757}
 #involved #centre-content {background:#9B5C99}
 
+#programmes {margin-left:10px}
+.programme-item-col {padding:0px}
+.programme-item-detail {padding:0px}
+
+#right-content #projects p{text-transform:uppercase;margin-bottom:5px} 
+#proj #right-content #projects p a{text-transform:uppercase;} 
+
+#projectdetail img {width:100%}
+#projectdetail table td {text-align:left;vertical-align:top}
+
+#projectdetail #projectImages img {margin-top:10px};
 
 #right-content div.colleague-details p {text-transform:uppercase;font-size:1rem;margin-top:20px}
 #right-content div.colleague-info p {text-transform:none;font-size:0.8rem}
 .colleague-image {width:310px}
 
+#proj #right-content p a {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+    text-transform: none;
+}
 
-
-div.colleague { width:310px}
+div.colleague { width:310px;max-width:310px}
 #right-content p{ margin:0px 0px 0px 0px}
+#vacancy #right-content p{ margin:30px 30px 30px 30px;font-size:0.8rem}
 .btn-general
 {
     background-color: #D9D9D9;
@@ -90,12 +109,12 @@ div.colleague { width:310px}
 }
 .image-first
 {
-    width:210px;
+    width:280px;
     margin:10px 10px 10px 10px;
 }
 .image-second
 {
-    width:180px;
+    width:260px;
     margin:10px 10px 10px 10px;
 }
 .image-third
@@ -105,10 +124,26 @@ div.colleague { width:310px}
 }
 .image-forth
 {
-    width:240px;
+    width:280px;
     margin:10px 10px 10px 10px;
 }
 .image-fifth
+{
+    width:290px;
+    margin:10px 10px 10px 10px;
+}
+
+.image-sixth
+{
+    width:170px;
+    margin:10px 10px 10px 10px;
+}
+.image-seventh
+{
+    width:170px;
+    margin:10px 10px 10px 10px;
+}
+.image-eigth
 {
     width:120px;
     margin:10px 10px 10px 10px;
@@ -119,3 +154,10 @@ div.colleague { width:310px}
 }
 
 .colleague {width:150px}
+
+
+.programme-item-col
+{
+    border-top:1px solid #000000;
+    
+}
