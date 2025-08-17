@@ -24,7 +24,17 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+function renderID(client,  id,container, renderer)
+{
+    
+    client.getEntry(id)
+            .then(function (entry) {
+                console.log(entry);
+                
+                container.html(renderer(entry));
+            });
 
+}
 
 
 function renderContent(client, contenttype, queryfield,queryvalue,order, renderer)
@@ -35,17 +45,18 @@ function renderContent(client, contenttype, queryfield,queryvalue,order, rendere
     
     if(order!=null)
     {
-        query.order = 'fields.' + order;
+        query.order =  order;
     }
     if(queryfield!=null)
     {
         query['fields.' + queryfield] = queryvalue;
     }
-    client.getEntries({
-        content_type:contenttype
+    client.getEntries(
+        query
+        //content_type:contenttype
         //#'fields.colleagueType': '${empty param.colleagueType ? 'Core' : param.colleagueType}',
         //order: 'fields.ranking'
-    })
+    )
             .then(function (entries) {
                 console.log(entries);
                 container.html(renderer(entries.items));

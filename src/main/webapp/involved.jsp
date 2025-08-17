@@ -22,8 +22,8 @@
                     
             
         </div>
-        <div class="col-md-6">
-           Include the form
+        <div id="right-content" class="col-md-6">
+           Include the contact form
             
         </div>
       </div>

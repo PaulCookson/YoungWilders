@@ -26,7 +26,7 @@
                     
                
                 
-                <img width="100px" src='assets/logo.png'>
+                    <a href="/home.jsp "><img width="100px" src='assets/logo.png'></a>
             </div>
 
                 

@@ -18,11 +18,11 @@
                 
                 <div  id="centre-content"  class="col-md-4 content-first">
                     <p>Youngwilders started in 2020 as the passion project of a group of friends hellbent on helping nature recovery.<br><br></p>
-
+                    <div class="button_group" >
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a><br><br>
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Key Collaborators Team</a><br><br>
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Advisor">Advisors</a><br><br>
-
+</div>
 
                 </div>
                 <div id="right-content" class="col-md-6">
@@ -60,29 +60,12 @@
 
                 container = $('#colleagues'); 
 
+                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','-fields.ranking', renderColleagues)
 
 
             }
 
-            //renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}',null, renderColleagues)
-var object1 = {
-                content_type: PRODUCT_CONTENT_TYPE_ID,
-                'fields.colleagueType': '${empty param.colleagueType ? 'Core' : param.colleagueType}',
-                order:'fields.ranking'
-            };
-
             
-
-            
-
-            /*contentfulClient.getEntries(object1)
-                    .then(function (entries) {
-                        console.log(entries);
-                        container.html(renderColleagues(entries.items));
-                    })
-*/
-renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','-ranking', renderColleagues)
-
             function renderColleagues(colleagues) {
                 return '' +
                         '<div class="colleagues row">' +
@@ -117,6 +100,8 @@ renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empt
                         
                         '</div>'
             }
+            
+            
 
             function renderImage(image) {
                 if (image && image.fields.file) {

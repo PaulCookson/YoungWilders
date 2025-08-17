@@ -4,7 +4,7 @@
     <head>
         <%@include  file="includes/head.jsp" %>
     </head>
-    <body>
+    <body id='home'>
         
         <div class="container">
             <div class="row">
@@ -12,22 +12,25 @@
           <%@include  file="includes/leftnav.jsp" %>
         
         <div id="centre-content" class="col-md-4 content-first">
-            <p>Youth-led nature recovery in the UK. </p>
-                    <p>
-                        We accelerate UK nature recovery and centre young people in the process and the movement.
-                        
-                    </p>
-                    <p>
-                        In the next three years, we want every young person in England and Wales within an hour of a youth-led nature recovery project.
-                    </p>
+            <div id="content">
+                    
+                    </div>
+            
             
         </div>
-        <div class="col-md-6">
+        <div id='right-content' class="col-md-6">
             <img class="image-first" src="assets/1.jpg">
             <img class="image-second" src="assets/2.jpg">
-            <img class="image-third" src="assets/2.jpg">
-            <img class="image-forth" src="assets/2.jpg">
-            <img class="image-fifth" src="assets/2.jpg">
+            <img class="image-third" src="assets/3.png">
+            <img class="image-forth" src="assets/4.png">
+            <img class="image-fifth" src="assets/5.png">
+            <div style="width:200px;display:inline">
+                <img class="image-sixth" src="assets/8.png">
+            <img class="image-seventh" src="assets/7.png">
+            </div>
+            
+            <img class="image-eighth" src="assets/6.png">
+            
             
         </div>
       </div>
@@ -90,6 +93,36 @@
             </div>
         </div>
         --%>
+         <script>
+            
+            
+            
+            function renderer(entry)
+            {
+
+                return documentToHtmlString(entry.fields.pageContent)
+
+            }
+            
+            var contentfulClient;
+            $(document).ready()
+            {
+
+
+                contentfulClient = contentful.createClient({
+                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
+                    space: 'y0hkcnou78kd'
+                });
+
+                renderID(contentfulClient, '5H6xbZFo4zJXfhmTIEeyLL',$('#content'), renderer);
+                
+
+
+            }
+
+
+        </script>    
+        
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
