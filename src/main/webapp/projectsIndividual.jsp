@@ -11,7 +11,7 @@
         
           <%@include  file="includes/leftnav.jsp" %>
         
-        <div id="centre-content"  class="col-md-4 content-first">
+        <div id="centre-content"  class="col-lg-4 content-first">
             <p>Youth-led nature recovery in the UK. </p>
                     <p>
                         We accelerate UK nature recovery and centre young people in the process and the movement.
@@ -22,7 +22,7 @@
                     </p>
             
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <img class="image-first" src="assets/1.jpg">
             <img class="image-second" src="assets/2.jpg">
             <img class="image-third" src="assets/2.jpg">

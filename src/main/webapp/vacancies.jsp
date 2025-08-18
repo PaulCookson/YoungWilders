@@ -11,7 +11,7 @@
         
           <%@include  file="includes/leftnav.jsp" %>
         
-        <div id="centre-content" class="col-md-4 content-first">
+        <div id="centre-content" class="col-lg-4 content-first">
             <p>Youngwilders is a small but growing team, any job opportunities will be posted on this page. We are always interested in hearing from young people looking to enter the sector and are very happy to chat about future careers. 
                 <br><br>
                 Please feel free to get in touch here <br><br></p>
@@ -19,7 +19,7 @@
             <a type="button" class="btn btn-general" href="vacancies.jsp">Visual Lead</a>
            <a type="button" class="btn btn-general" href="vacancies.jsp?type=wild%20steward">Wild Stewards</a>
         </div>
-        <div id="right-content" class="col-md-6">
+        <div id="right-content" class="col-lg-6">
             <c:choose>
                 <c:when test="${not empty param.type }">
                     <p>

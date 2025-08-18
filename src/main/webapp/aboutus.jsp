@@ -16,7 +16,7 @@
                 
                     <%@include  file="includes/leftnav.jsp" %>
                 
-                <div  id="centre-content"  class="col-md-4 content-first">
+                <div  id="centre-content"  class="col-lg-4 content-first">
                     <p>Youngwilders started in 2020 as the passion project of a group of friends hellbent on helping nature recovery.<br><br></p>
                     <div class="button_group" >
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a><br><br>
@@ -25,7 +25,7 @@
 </div>
 
                 </div>
-                <div id="right-content" class="col-md-6">
+                <div id="right-content" class="col-lg-6">
                     <div id="colleagues">
 
                     </div>
@@ -68,7 +68,7 @@
             
             function renderColleagues(colleagues) {
                 return '' +
-                        '<div class="colleagues row">' +
+                        '<div class="row">' +
                         colleagues.map(renderSingleColleague).join('\n') +
                         '</div>'
             }
@@ -76,7 +76,7 @@
             function renderSingleColleague(colleague) {
                 var fields = colleague.fields
                 console.log(fields)
-                return '<div class="colleague col">' +
+                return '<div class="colleague col-md-6">' +
                         '<div class="colleague-image">' +
                         renderImage(fields.picture) +
                         '</div>' +
@@ -105,11 +105,10 @@
 
             function renderImage(image) {
                 if (image && image.fields.file) {
-                    return '<a href="product/' + 'slug' + '">' +
-                            '<img src="' + image.fields.file.url + '" width="150"  />' +
-                            '</a>'
+                    return '<img src="' + image.fields.file.url + '"   />' ;
+                            
                 } else {
-                    return ''
+                    return '';
                 }
             }
 

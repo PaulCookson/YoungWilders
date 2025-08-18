@@ -11,7 +11,7 @@
 
                 <%@include  file="includes/leftnav.jsp" %>
 
-                <div id="centre-content" class="col-md-4 content-first">
+                <div id="centre-content" class="col-lg-4 content-first">
                     <div id="content">
                     
                     </div>
@@ -21,16 +21,16 @@
 
                     </div>           
                 </div>
-                <div id="right-content" class="col-md-6">
+                <div id="right-content" class="col-lg-6">
 
                     <div class="row">
 
-                        <div id="projects" class="col-md-4" style="margin-top:30px;">
+                        <div id="projects" class="col-lg-4" style="margin-top:30px;">
                             <!--<p><a class="link-opacity-100" href="vacancies.jsp?type=other">Pounce Hall</a></p>
                             <p><a class="link-opacity-100" href="vacancies.jsp?type=other">123</a></p>
                             -->
                         </div>
-                        <div id="projectdetail" class="col-md-8" style="margin-top:30px;">
+                        <div id="projectdetail" class="col-lg-8" style="margin-top:30px;">
                             
                             <div>
                                 

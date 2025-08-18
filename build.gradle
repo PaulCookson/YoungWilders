@@ -8,6 +8,7 @@ repositories {
 
 dependencies {
     providedCompile 'javax:javaee-web-api:7.0'
-    
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+    implementation("javax.servlet:jstl:1.2")
     testImplementation     'junit:junit:4.13'
 }

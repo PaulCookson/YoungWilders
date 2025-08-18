@@ -11,7 +11,7 @@
 
                 <%@include  file="includes/leftnav.jsp" %>
 
-                <div id="centre-content"  class="col-md-4 content-first">
+                <div id="centre-content"  class="col-lg-4 content-first">
                     
                     <div id="content">
                     
@@ -21,7 +21,7 @@
                         <a type="button" class="btn btn-general" href="programme.jsp?date=past">Past</a>
                     </div>
                 </div>
-                <div id="right-content" class="col-md-6">
+                <div id="right-content" class="col-lg-6">
                     
                     <div id="programmes">
                         
@@ -78,13 +78,13 @@
                             '<div data-bs-toggle="collapse" class="programme-item-col question collapsed" href="#faq' + index + '" style="width:10px" aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
                             '<div id="faq' + index + '" class="programme-item-detail row collapse" data-bs-parent=".faq-list" style="margin-top: 10px;">' +
 
-                             '   <div class="col-md-6">' +
+                             '   <div class="col-lg-6">' +
                              
                                  documentToHtmlString(fields.programmeOverview) +
 
                               
                                 '</div>' +
-                                '<div class="col-md-6">' +
+                                '<div class="col-lg-6">' +
                                 '    <img style="width:100%" src="./assets/programme.png">   ' +
                                 '</div>' +
 
@@ -113,10 +113,10 @@
                 //console.debug(todayUTC.toISOString());
                                 <c:choose>
                                     <c:when test="${param.date eq 'past'}">
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'fields.programmeStartDate', renderProgrammes)
                                     </c:when>
                                     <c:otherwise>
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'fields.programmeStartDate', renderProgrammes)
                                     </c:otherwise>
                                 </c:choose>
                 

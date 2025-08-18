@@ -45,7 +45,7 @@ function renderContent(client, contenttype, queryfield,queryvalue,order, rendere
     
     if(order!=null)
     {
-        query.order =  'fields'.order;
+        query.order =  order;
     }
     if(queryfield!=null)
     {

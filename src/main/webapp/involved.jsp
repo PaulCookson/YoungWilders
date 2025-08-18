@@ -11,7 +11,7 @@
         
           <%@include  file="includes/leftnav.jsp" %>
         
-        <div id="centre-content"  class="col-md-4 content-second">
+        <div id="centre-content"  class="col-lg-4 content-second">
             <p>Welcome to the Youngwilders network. Please fill in this form, and make sure to check out our programme. 
 
 </p>
@@ -22,7 +22,7 @@
                     
             
         </div>
-        <div id="right-content" class="col-md-6">
+        <div id="right-content" class="col-lg-6">
             <iframe style="width:100%;height:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSfLsGBdeMTbqFOERndckPbdPosADz20Qfv7RXwPgEEHS9hLAw/viewform?usp=preview"></iframe>
             
         </div>
