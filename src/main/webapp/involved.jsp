@@ -23,7 +23,7 @@
             
         </div>
         <div id="right-content" class="col-md-6">
-           Include the contact form
+            <iframe style="width:100%;height:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSfLsGBdeMTbqFOERndckPbdPosADz20Qfv7RXwPgEEHS9hLAw/viewform?usp=preview"></iframe>
             
         </div>
       </div>

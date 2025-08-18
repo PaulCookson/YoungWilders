@@ -87,7 +87,7 @@
             }
 
             function renderColleagueDetails(fields) {
-                return  '<p>' + fields.name + '</p>' + renderProductHeader(fields) 
+                return  '<h3>' + fields.name + '</h3>' + renderProductHeader(fields) 
                        
             }
 
@@ -106,7 +106,7 @@
             function renderImage(image) {
                 if (image && image.fields.file) {
                     return '<a href="product/' + 'slug' + '">' +
-                            '<img src="' + image.fields.file.url + '" width="150" height="150" />' +
+                            '<img src="' + image.fields.file.url + '" width="150"  />' +
                             '</a>'
                 } else {
                     return ''

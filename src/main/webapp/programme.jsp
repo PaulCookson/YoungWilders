@@ -12,12 +12,13 @@
                 <%@include  file="includes/leftnav.jsp" %>
 
                 <div id="centre-content"  class="col-md-4 content-first">
-                    <p>We run events on our youth-led nature recovery projects across the UK. we also run a number of creative programmes and events centred on up-skilling and energising the next generation of environmental stewards under 'Overgrowth'.
-                    </p>
-
+                    
+                    <div id="content">
+                    
+                    </div>
                     <div class="button_group">
-                        <a type="button" class="btn btn-general" href="programme.jsp">Upcoming</a>
-                        <a type="button" class="btn btn-general" href="programme.jsp">Past</a>
+                        <a type="button" class="btn btn-general" href="programme.jsp?date=upcoming">Upcoming</a>
+                        <a type="button" class="btn btn-general" href="programme.jsp?date=past">Past</a>
                     </div>
                 </div>
                 <div id="right-content" class="col-md-6">
@@ -26,48 +27,7 @@
                         
                         
                     </div>
-                    <%--
-                    <ul class="faq-list" style="list-style-type:none;padding-left: 0">
-
-                        <li class="programme-item">
-                        <div class="row">
-                            <div class="programme-item-col" style="width:200px;">
-                                Rye Meadow 
-                                
-                            </div>
-                            <div class="programme-item-col" style="width:200px;">
-
-                                Rye, East Sussex
-                                
-                            </div>
-                            <div class="programme-item-col" style="width:170px;">
-                                10.02.2024
-                                
-                            </div>
-                            
-                            <div data-bs-toggle="collapse" class="programme-item-col collapsed question" href="#faq1" style="width:10px">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                            <div id="faq1" class="collapse row" data-bs-parent=".faq-list" style="margin-top:10px">
-
-                                <div class="col-md-6">
-                                    <p>
-                                        OVERVIEW: Beginning in 2020, Rye Meadow marked our first ever project. It involves the creation of 2 acres of native wildflower meadow that should see its first major bloom in Spring 2023. 
-                                        Rye Meadow's status as our first ever project has ensured it a special place in our collective heart. It's also situated in a phenomenally beautiful part of the country, the High Weald, and is framed by vineyards and old hedgerows. The Sussex Lund Grant Program has supported our work throughout, and helped us conduct the necessary mowing and sowing, as well as provided guidance on seed mixes for the local area.
-
-                                    </p>
-                                </div>
-                                <div  class="col-md-6">
-                                    <img style="width:100%" src="./assets/programme.png">   
-                                </div>
-
-                            </div>
-                        </div>
-                        </li>
-
-                        
-
-
-                    </ul>
-                    --%>
+               
                 </div>
             </div>
 
@@ -80,6 +40,12 @@
             var container;
             var PRODUCT_CONTENT_TYPE_ID;
             var contentfulClient;
+            
+            function renderer(entry)
+            {
+                return documentToHtmlString(entry.fields.pageContent)
+
+            }
             
             function renderProgrammes(programmes) {
                 return '' +
@@ -105,7 +71,7 @@
                                 
                             '</div>' +
                             '<div class="programme-item-col" style="width:70px;">' +
-                                 '' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-us') +
+                                 '' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') +
                                 
                             '</div>' +
 
@@ -140,8 +106,21 @@
 
                 container = $('#programmes'); 
 
-                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null,null,null, renderProgrammes)
-
+                renderID(contentfulClient, '6CwmRW9EJ4HWhVflhk0Iay',$('#content'), renderer);
+                var now = new Date();
+		var todayUTC = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+		var gt = todayUTC.toISOString().slice(0, 10);
+                //console.debug(todayUTC.toISOString());
+                                <c:choose>
+                                    <c:when test="${param.date eq 'past'}">
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'programmeStartDate', renderProgrammes)
+                                    </c:when>
+                                    <c:otherwise>
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'programmeStartDate', renderProgrammes)
+                                    </c:otherwise>
+                                </c:choose>
+                
+                
 
             }
             
