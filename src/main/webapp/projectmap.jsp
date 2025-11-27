@@ -93,16 +93,11 @@
 
                 renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null, null, renderProjects)
 
-                renderID(contentfulClient, '74IVrpw1ZyaXW9QmJ5DgtC',$('#content'), renderer);
+                renderID(contentfulClient, '74IVrpw1ZyaXW9QmJ5DgtC',$('#content'), basicRenderer);
 
 
             }
-            function renderer(entry)
-            {
-
-                return documentToHtmlString(entry.fields.pageContent)
-
-            }
+            
 
             function renderProjects(data)
             {

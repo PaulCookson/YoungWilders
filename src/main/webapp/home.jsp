@@ -97,12 +97,7 @@
             
             
             
-            function renderer(entry)
-            {
-
-                return documentToHtmlString(entry.fields.pageContent)
-
-            }
+            
             
             var contentfulClient;
             $(document).ready()
@@ -114,7 +109,7 @@
                     space: 'y0hkcnou78kd'
                 });
 
-                renderID(contentfulClient, '5H6xbZFo4zJXfhmTIEeyLL',$('#content'), renderer);
+                renderID(contentfulClient, '5H6xbZFo4zJXfhmTIEeyLL',$('#content'), basicRenderer);
                 
 
 

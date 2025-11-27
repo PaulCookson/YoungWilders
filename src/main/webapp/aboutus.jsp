@@ -17,10 +17,13 @@
                     <%@include  file="includes/leftnav.jsp" %>
                 
                 <div  id="centre-content"  class="col-lg-4 content-first">
-                    <p>Youngwilders started in 2020 as the passion project of a group of friends hellbent on helping nature recovery.<br><br></p>
+                    <div id="content">
+                        
+                    </div>
+                    
                     <div class="button_group" >
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a><br><br>
-                    <a class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Key Collaborators Team</a><br><br>
+                    <a class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Wild Stewards</a><br><br>
                     <a class="btn btn-general" href="aboutus.jsp?colleagueType=Advisor">Advisors</a><br><br>
 </div>
 
@@ -60,6 +63,7 @@
 
                 container = $('#colleagues'); 
 
+                renderID(contentfulClient, '48Q8v5h7UAwXnkV0qtbJJ2',$('#content'), basicRenderer);
                 renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','-fields.ranking', renderColleagues)
 
 
@@ -76,7 +80,7 @@
             function renderSingleColleague(colleague) {
                 var fields = colleague.fields
                 console.log(fields)
-                return '<div class="colleague col-md-6">' +
+                return '<div class="colleague col-md-6 col-sm-6">' +
                         '<div class="colleague-image">' +
                         renderImage(fields.picture) +
                         '</div>' +
@@ -87,7 +91,7 @@
             }
 
             function renderColleagueDetails(fields) {
-                return  '<h3>' + fields.name + '</h3>' + renderProductHeader(fields) 
+                return  '<h3>' + fields.name + (fields.pronoun in window?'': ' (' + fields.pronoun + ')')+   '</h3>' + renderProductHeader(fields) 
                        
             }
 

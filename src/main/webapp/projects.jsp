@@ -21,7 +21,7 @@
 
                     </div>           
                 </div>
-                <div id="right-content" class="col-lg-6">
+                <div id="right-content" class="col-lg-6" style="min-height: 600px">
 
                     <div class="row">
 
@@ -69,12 +69,7 @@
                 + '</div>');
                 
             }
-            function renderer(entry)
-            {
-
-                return documentToHtmlString(entry.fields.pageContent)
-
-            }
+            
             function renderProjects(data)
             {
                 projects = data;
@@ -120,7 +115,7 @@
 
 
                 renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null, null, renderProjects)
-                renderID(contentfulClient, '74IVrpw1ZyaXW9QmJ5DgtC',$('#content'), renderer);
+                renderID(contentfulClient, '74IVrpw1ZyaXW9QmJ5DgtC',$('#content'), basicRenderer);
                 
 
 

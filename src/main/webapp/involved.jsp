@@ -22,8 +22,8 @@
                     
             
         </div>
-        <div id="right-content" class="col-lg-6">
-            <iframe style="width:100%;height:100%" src="https://docs.google.com/forms/d/e/1FAIpQLSfLsGBdeMTbqFOERndckPbdPosADz20Qfv7RXwPgEEHS9hLAw/viewform?usp=preview"></iframe>
+        <div id="right-content" class="col-lg-6" style="min-height:3000px">
+            <iframe style="width:100%;height:100%;" src="https://docs.google.com/forms/d/e/1FAIpQLSfLsGBdeMTbqFOERndckPbdPosADz20Qfv7RXwPgEEHS9hLAw/viewform?usp=preview"></iframe>
             
         </div>
       </div>

@@ -63,3 +63,9 @@ function renderContent(client, contenttype, queryfield,queryvalue,order, rendere
             })
 
 }
+function basicRenderer(entry)
+{
+
+    return documentToHtmlString(entry.fields.pageContent)
+
+}

@@ -23,7 +23,7 @@
                 </div>
                 <div id="right-content" class="col-lg-6">
                     
-                    <div id="programmes">
+                    <div id="programmes" class="row">
                         
                         
                     </div>
@@ -41,11 +41,7 @@
             var PRODUCT_CONTENT_TYPE_ID;
             var contentfulClient;
             
-            function renderer(entry)
-            {
-                return documentToHtmlString(entry.fields.pageContent)
-
-            }
+           
             
             function renderProgrammes(programmes) {
                 return '' +
@@ -61,21 +57,23 @@
                 var fields = programme.fields
                 return '<li class="programme-item">' +
                         '<div class="row">' +
-                            '<div class="programme-item-col" style="width:300px;">' + 
+                            '<div class="programme-item-col col-md-6 col-sm-3" >' + 
                                 fields.programmeName + 
                                 
                             '</div>' +
-                            '<div class="programme-item-col" style="width:240px;">' +
+                            '<div class="programme-item-col col-md-3  d-sm-none d-md-block" >' +
 
                                 fields.programmeLocation +
                                 
                             '</div>' +
-                            '<div class="programme-item-col" style="width:70px;">' +
-                                 '' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') +
-                                
+                            '<div class="programme-item-col col-md-3 col-sm-3" >' +
+                                 '<div class="row">' +
+                                    '<div class="col-md-6">' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') + '</div>' + 
+                                    '<div data-bs-toggle="collapse" class="col-md-6 question collapsed" href="#faq' + index + '"  aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
+                                 '</div>' + 
                             '</div>' +
 
-                            '<div data-bs-toggle="collapse" class="programme-item-col question collapsed" href="#faq' + index + '" style="width:10px" aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
+                            
                             '<div id="faq' + index + '" class="programme-item-detail row collapse" data-bs-parent=".faq-list" style="margin-top: 10px;">' +
 
                              '   <div class="col-lg-6">' +
@@ -106,7 +104,7 @@
 
                 container = $('#programmes'); 
 
-                renderID(contentfulClient, '6CwmRW9EJ4HWhVflhk0Iay',$('#content'), renderer);
+                renderID(contentfulClient, '6CwmRW9EJ4HWhVflhk0Iay',$('#content'), basicRenderer);
                 var now = new Date();
 		var todayUTC = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
 		var gt = todayUTC.toISOString().slice(0, 10);
