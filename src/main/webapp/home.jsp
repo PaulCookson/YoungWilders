@@ -104,10 +104,7 @@
             {
 
 
-                contentfulClient = contentful.createClient({
-                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
-                    space: 'y0hkcnou78kd'
-                });
+                contentfulClient = getClient(contentful);
 
                 renderID(contentfulClient, '5H6xbZFo4zJXfhmTIEeyLL',$('#content'), basicRenderer);
                 

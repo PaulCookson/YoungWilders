@@ -95,10 +95,7 @@
             {
 
 
-                contentfulClient = contentful.createClient({
-                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
-                    space: 'y0hkcnou78kd'
-                });
+                contentfulClient = getClient(contentful);
 
                 PRODUCT_CONTENT_TYPE_ID = 'programme';
 

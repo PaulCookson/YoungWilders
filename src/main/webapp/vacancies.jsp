@@ -73,10 +73,7 @@ The deadline for applications is the 14th January, and we will be inviting candi
             {
 
 
-                contentfulClient = contentful.createClient({
-                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
-                    space: 'y0hkcnou78kd'
-                });
+                contentfulClient = getClient(contentful);
 
                 
                 renderID(contentfulClient, '7EeupRioCGgRs6xpCt0wL0',$('#content'), basicRenderer);

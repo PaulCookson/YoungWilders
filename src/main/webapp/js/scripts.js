@@ -69,3 +69,11 @@ function basicRenderer(entry)
     return documentToHtmlString(entry.fields.pageContent)
 
 }
+ function getClient(contentful)
+ {
+     return contentful.createClient({
+                    accessToken: 'ytygcE-zI6VEYycBoRzvYvtXW_VcXAYfldZSnmDFNhs',
+                    space: 'y0hkcnou78kd'
+                });
+     
+ } 
