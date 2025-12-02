@@ -49,6 +49,7 @@ body{
 #proj #right-content #projects p a{text-transform:uppercase;} 
 
 #projectdetail img {width:100%}
+#projectdetailmap {margin-bottom:10px}
 #projectdetail table td {text-align:left;vertical-align:top}
 
 #projectdetail #projectImages img {margin-top:10px};

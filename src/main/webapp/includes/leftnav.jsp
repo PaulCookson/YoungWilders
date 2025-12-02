@@ -39,7 +39,7 @@
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=wild steward">Wild Stewards</a></p>
                     <p>Research & Reports</p>
                     <p><a class="link-opacity-100" href="annualreport.jsp">Annual reports</a></p>
-                    <p><a class="link-opacity-100" href="#">Writing</a></p>
+                    <p><a class="link-opacity-100" href="#">Scrapbook</a></p>
                     <p>Contact</p>
                     <p><a class="link-opacity-100" href="#">General Enquiries</a></p>
                     <p><a class="link-opacity-100" href="#">Employment</a><br><br><br><br><br></p>

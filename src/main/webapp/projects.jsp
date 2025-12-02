@@ -1,4 +1,6 @@
-
+<%
+response.setHeader("X-MyHeader", "Test");
+%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,18 +57,57 @@
             {
                 
                 var fields =projects[index].fields;
-                var images = fields.projectImages.map(renderImage).join('<br>');        
                 
-                $('#projectdetail').html('<div>' + '<img src="' + fields.shapeFile.fields.file.url + '" />' +
+                var images;
+        
+                if(fields.projectImages.map)
+                    images = fields.projectImages.map(renderImage).join('<br>');        
+                
+                
+                
+                $('#projectdetail').html('<div>' +
+                        '<div id="projectdetailmap" style="width:100%;height:200px"></div>'        
+                +
+                
                 '<table><tr><td width="40%"><p>PROJECT START<br>' + new Date(Date.parse(fields.projectDate)).getFullYear() +'<br><br>'
                  + 'ACREAGE<br>' +  fields.acreage + '<br><br>WILD STEWARDS<br>' 
                  + fields.wildStewards + '<br><br>ECOLOGICAL WORK</p>' +
-                documentToHtmlString(fields.ecologicalWork)  +
-                '</td><td>' + fields.location + '<br><br><br>' +
+                
+                (fields.ecologicalWork ? documentToHtmlString(fields.ecologicalWork) : '') + 
+                
+                '</td><td>' + (fields.location? fields.location:'') + '<br><br><br>' +
                 documentToHtmlString(fields.factSheet)  +
                 '</td></tr></table>' 
                 + '<div id="projectImages">' + images + '</div>'
                 + '</div>');
+                
+                var src='https://test.nottinghambackgammon.org/' + fields.mapFile ;
+                map = new google.maps.Map(document.getElementById('projectdetailmap'), {
+    center: {lat: fields.lattitude, lng: fields.longitude },  
+    zoom: 7,
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    disableDefaultUI: true
+  });
+                
+var customStyled = [
+  {
+    featureType: "all",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+]
+map.set('styles',customStyled);
+                
+                
+
+                 var kmlLayer = new google.maps.KmlLayer(src, {
+                        suppressInfoWindows: true,
+                        preserveViewport: false,
+                        map: map
+                      });
+                
                 
             }
             
@@ -98,6 +139,7 @@
             var container;
             var PRODUCT_CONTENT_TYPE_ID;
             var contentfulClient;
+            let map;
             $(document).ready()
             {
 
@@ -117,12 +159,29 @@
 
 
             }
+            async function initMap() {
+                // The location of Uluru
+                const position = {lat: 52.9962192, lng: -1.133586};
+
+                // Request needed libraries.
+                //@ts-ignore
+                const {Map} = await google.maps.importLibrary("maps");
+                const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
+
+                // The map, centered at Uluru
+               
+
+
+
+            }
 
 
         </script>    
 
 
-
+ <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxol2BCz3gtSPa1Ig5Zs0sx23kmq2Qfnw&loading=async&callback=initMap">
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
