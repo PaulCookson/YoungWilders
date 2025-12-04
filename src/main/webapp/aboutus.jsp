@@ -22,10 +22,12 @@
                     </div>
                     
                     <div class="button_group" >
-                    <a class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a><br><br>
-                    <a class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Wild Stewards</a><br><br>
-                    <a class="btn btn-general" href="aboutus.jsp?colleagueType=Advisor">Advisors</a><br><br>
-</div>
+                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a>
+                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Wild Stewards</a>
+                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Advisor">Advisors</a>
+                    </div>
+                    
+ 
 
                 </div>
                 <div id="right-content" class="col-lg-6">
@@ -61,7 +63,7 @@
                 container = $('#colleagues'); 
 
                 renderID(contentfulClient, '48Q8v5h7UAwXnkV0qtbJJ2',$('#content'), basicRenderer);
-                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','-fields.ranking', renderColleagues)
+                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','fields.ranking', renderColleagues)
 
 
             }
@@ -104,14 +106,7 @@
             
             
 
-            function renderImage(image) {
-                if (image && image.fields.file) {
-                    return '<img src="' + image.fields.file.url + '"   />' ;
-                            
-                } else {
-                    return '';
-                }
-            }
+            
 
         </script>    
     </body>

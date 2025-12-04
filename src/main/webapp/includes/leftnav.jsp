@@ -47,7 +47,7 @@
                     
                
                 
-                    <a href="./home.jsp "><img width="100px" src='assets/logo.png'></a>
+                    <a href="./index.jsp "><img width="100px" src='assets/logo.png'></a>
             </div>
 	    	    </div>
       </div>

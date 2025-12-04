@@ -22,6 +22,7 @@ body{
 
 #centre-content p {font-size:1.2rem;line-height:25px;margin:25px 30px 0px 30px }
 #right-content p {margin-left:30px;margin-top:30px;margin-right:30px}
+#right-content h1 {font-size:1.2rem}
 
 .yw_menu {margin-left:30px}
 
@@ -44,11 +45,13 @@ body{
 #programmes {margin-left:10px}
 .programme-item-col {padding:0px}
 .programme-item-detail {padding:0px; margin-bottom:10px}
+.programme-item-detail img {width:100%}
 
 #right-content #projects p{text-transform:uppercase;margin-bottom:5px} 
 #proj #right-content #projects p a{text-transform:uppercase;} 
 
 #projectdetail img {width:100%}
+
 #projectdetailmap {margin-bottom:10px}
 #projectdetail table td {text-align:left;vertical-align:top}
 
@@ -170,4 +173,13 @@ body{
 {
     border-top:1px solid #000000;
     
+}
+
+
+@media (max-width: 576px) {
+    #right-content 
+    {
+        margin-left:5px;margin-right:5px;
+    }
+    #centre-content .button_group{margin-bottom:20px}
 }

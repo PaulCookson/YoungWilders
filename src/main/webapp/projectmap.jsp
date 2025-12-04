@@ -128,7 +128,7 @@
 
                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
                         return function () {
-                            infowindow.setContent(documentToHtmlString(data[i].fields.popUp));
+                            infowindow.setContent('<h1>' + data[i].fields.projectName + '</h1>' + documentToHtmlString(data[i].fields.popUp) );
                             infowindow.open(Map, marker);
                         }
                     })(marker, i));

@@ -83,7 +83,7 @@
                               
                                 '</div>' +
                                 '<div class="col-lg-6">' +
-                                '    <img style="width:100%" src="./assets/programme.png">   ' +
+                                renderImage(fields.programmeImage) +
                                 '</div>' +
 
                             '</div>' +

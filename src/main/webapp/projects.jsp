@@ -1,6 +1,3 @@
-<%
-response.setHeader("X-MyHeader", "Test");
-%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -60,7 +57,7 @@ response.setHeader("X-MyHeader", "Test");
                 
                 var images;
         
-                if(fields.projectImages.map)
+                if(fields.projectImages && fields.projectImages.map)
                     images = fields.projectImages.map(renderImage).join('<br>');        
                 
                 
@@ -125,13 +122,7 @@ map.set('styles',customStyled);
                 
             
             }
-            function renderImage(image) {
-                if (image && image.fields.file) {
-                    return '<img  src="' + image.fields.file.url + '" />' ;
-                } else {
-                    return '';
-                }
-            }
+            
             function renderProjectDetails(fields) {
                 return  '<p>' + fields.projectName + '</p>';
 

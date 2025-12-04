@@ -32,8 +32,10 @@ function renderID(client,  id,container, renderer)
                 console.log(entry);
                 
                 container.html(renderer(entry));
+            })
+            .catch((error) => {
+                console.error(error);
             });
-
 }
 
 
@@ -77,3 +79,11 @@ function basicRenderer(entry)
                 });
      
  } 
+function renderImage(image) {
+                if (image && image.fields.file) {
+                    return '<img src="' + image.fields.file.url + '"   />' ;
+                            
+                } else {
+                    return '';
+                }
+            }
