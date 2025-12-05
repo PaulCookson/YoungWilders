@@ -57,19 +57,19 @@
                 var fields = programme.fields
                 return '<li class="programme-item">' +
                         '<div class="row">' +
-                            '<div class="programme-item-col col-md-6 col-sm-3" >' + 
+                            '<div class="programme-item-col col-md-6 col-sm-8 col-8" >' + 
                                 fields.programmeName + 
                                 
                             '</div>' +
-                            '<div class="programme-item-col col-md-3  d-sm-none d-md-block" >' +
+                            '<div class="programme-item-col col-md-3  d-sm-none d-none d-md-block" >' +
 
                                 fields.programmeLocation +
                                 
                             '</div>' +
-                            '<div class="programme-item-col col-md-3 col-sm-3" >' +
+                            '<div class="programme-item-col col-md-3 col-sm-4 col-4" >' +
                                  '<div class="row">' +
-                                    '<div class="col-md-6">' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') + '</div>' + 
-                                    '<div data-bs-toggle="collapse" class="col-md-6 question collapsed" href="#faq' + index + '"  aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
+                                    '<div class="col-md-8 col-sm-8 col-8">' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') + '</div>' + 
+                                    '<div data-bs-toggle="collapse" class="col-md-4 col-sm-4 col-4 question collapsed" href="#faq' + index + '"  aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
                                  '</div>' + 
                             '</div>' +
 
@@ -108,10 +108,10 @@
                 //console.debug(todayUTC.toISOString());
                                 <c:choose>
                                     <c:when test="${param.date eq 'past'}">
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'fields.programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'-fields.programmeStartDate', renderProgrammes)
                                     </c:when>
                                     <c:otherwise>
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'fields.programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'-fields.programmeStartDate', renderProgrammes)
                                     </c:otherwise>
                                 </c:choose>
                 

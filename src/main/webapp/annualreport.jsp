@@ -41,10 +41,20 @@
                 
                 renderID(contentfulClient, 'WQRV0feebQwFPEzv4WpZs',$('#content'), basicRenderer);
                 
+                renderID(contentfulClient, 'WQRV0feebQwFPEzv4WpZs',$('#right-content'), renderReport);
+                
+
+
 
 
             }
+            function renderReport(page) {
+                return  '<div><div style="background-color: white;width:80%;height:430px;margin-left:30px;margin-top:30px">'
+                        + '<object data="' + page.fields.pageMedia.fields.file.url + '" type="application/pdf" width="100%" height="100%" ><p>Your browser does not support PDFs. [Download the PDF](https://example.com/test.pdf) .</p> </object>'
+                        + '</div></div>';
 
+
+            }
             
             
             
