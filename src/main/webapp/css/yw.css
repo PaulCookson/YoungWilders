@@ -71,7 +71,9 @@ body{
     color: black;
     text-transform: none;
 }
-
+#proj #right-content table tr td:first-child {
+  padding-right: 5px;
+} 
 
 #right-content p{ margin:0px 0px 0px 0px}
 #vacancy #right-content p{ margin:30px 30px 30px 30px;font-size:0.8rem}
