@@ -93,7 +93,15 @@
 
 
             }
+            function renderCarousel(image) {
+                if (image && image.fields.file) {
+                    return '<div class="carousel-item active"><img class="d-block w-100" src="' + image.fields.file.url + '" alt="First slide"></div>';
             
+                            
+                } else {
+                    return '';
+                }
+            }
 
             function renderProjects(data)
             {
@@ -116,7 +124,7 @@
                 // Moved this line up here
                 this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // changed the "native element" to a standard DOM element for the sake of this example
 
-                var infowindow = new google.maps.InfoWindow();
+                var infowindow = new google.maps.InfoWindow({maxWidth: 400,headerDisabled: true });
 
                 var marker, i;
 
@@ -125,10 +133,27 @@
                         position: new google.maps.LatLng(data[i].fields.lattitude, data[i].fields.longitude),
                         map: this.map // You are using this.map here so it needs to be created before
                     });
-
+                    var images;
+                    if(data[i].fields.projectImages && data[i].fields.projectImages.map)
+                        images = data[i].fields.projectImages.map(renderCarousel).join();        
+                
                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
                         return function () {
-                            infowindow.setContent('<h1>' + data[i].fields.projectName + '</h1>' + documentToHtmlString(data[i].fields.popUp) );
+                            infowindow.setContent('<h1>' + data[i].fields.projectName + '</h1>'
+                                + '<div id="infoCarousel" class="carousel slide" data-ride="carousel">' +
+  '<div class="carousel-inner">' + images + 
+    
+  '</div>' +
+  '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">' +
+    '<span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+    
+  '</a>' +
+  '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">' +
+    '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+    
+  '</a>' +
+'</div>' +    
+                                 documentToHtmlString(data[i].fields.popUp) );
                             infowindow.open(Map, marker);
                         }
                     })(marker, i));

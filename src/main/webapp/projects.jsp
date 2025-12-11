@@ -50,6 +50,8 @@
             
             var projects;
             
+            
+            
             function renderDetail(index)
             {
                 
@@ -68,7 +70,7 @@
                 
                 '<table><tr><td width="40%"><p>PROJECT START<br>' + new Date(Date.parse(fields.projectDate)).getFullYear() +'<br><br>'
                  + 'ACREAGE<br>' +  fields.acreage + '<br><br>WILD STEWARDS<br>' 
-                 + fields.wildStewards + '<br><br>ECOLOGICAL WORK</p>' +
+                 + renderArray(fields.wildStewards) + '<br><br>ECOLOGICAL WORK</p>' +
                 
                 (fields.ecologicalWork ? documentToHtmlString(fields.ecologicalWork) : '') + 
                 
@@ -82,7 +84,7 @@
                 map = new google.maps.Map(document.getElementById('projectdetailmap'), {
     center: {lat: fields.lattitude, lng: fields.longitude },  
     zoom: 7,
-    mapTypeId: google.maps.MapTypeId.SATELLITE,
+    mapTypeId: 'satellite',
     disableDefaultUI: true
   });
                 

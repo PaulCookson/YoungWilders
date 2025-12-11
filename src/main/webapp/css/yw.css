@@ -15,9 +15,12 @@ body{
     background: #000000;
     
 }
-.button_group{margin-left:30px;margin-top:30px}
+#menu {background: #f5edd6}
 
-#centre-content{padding-left:0px;padding-right:0px}
+
+.button_group{margin-left:30px;margin-top:30px;}
+
+#centre-content{padding-left:0px;padding-right:0px; padding-bottom:30px;padding-bottom:30px;}
 #right-content{min-height: 600px}
 
 #centre-content p {font-size:1.2rem;line-height:25px;margin:25px 30px 0px 30px }
@@ -36,7 +39,7 @@ body{
 #second-menu p {margin-bottom:5px;font-weight:700;text-transform: uppercase;}
 #second-menu p a{text-decoration:none;font-weight:normal;color:black;text-transform: none;}
 
-#involved #right-content, #aboutus #right-content,#vacancy #right-content,#programme #right-content,#proj #right-content,#involved #right-content {background: #D9D9D9}
+#involved #right-content, #aboutus #right-content,#vacancy #right-content,#programme #right-content,#proj #right-content,#involved #right-content {background: #f5edd6}
 
 #aboutus #centre-content {background: #847DAC;}
 #programme #centre-content {background:#765757}
@@ -74,6 +77,13 @@ body{
 #proj #right-content table tr td:first-child {
   padding-right: 5px;
 } 
+
+#scrap #full-content div {
+    background: #FF0000;
+}
+#scrap #full-content div:nth-of-type(odd) {
+    background: #e0e0e0;
+}
 
 #right-content p{ margin:0px 0px 0px 0px}
 #vacancy #right-content p{ margin:30px 30px 30px 30px;font-size:0.8rem}
@@ -168,7 +178,9 @@ body{
     height: 100%;
 }
 
-
+//#infoCarousel img {height:200px};
+//.gm-style img {width:}
+//.gm-style-iw-chr > button {display: none;}
 
 
 .programme-item-col

@@ -10,7 +10,7 @@
 <%--            Then, I add the other following code in the CSS in desktop viewport 992px and up .navbar-collapse {         position: relative;     }
     --%>
 <!-- Sidenav -->
-<div id="menu" class="col-lg-2" style=" background: #D9D9D9">  
+<div id="menu" class="col-lg-2" >  
 <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     
@@ -37,9 +37,10 @@
                     <p>Opportunities</p>    
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=other">Vacancies</a></p>
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=wild steward">Wild Stewards</a></p>
+                    <p><a class="link-opacity-100" href="donate.jsp">Donate</a></p>
                     <p>Research & Reports</p>
                     <p><a class="link-opacity-100" href="annualreport.jsp">Annual reports</a></p>
-                    <p><a class="link-opacity-100" href="#">Scrapbook</a></p>
+                    <p><a class="link-opacity-100" href="scrapbook.jsp">Scrapbook</a></p>
                     <p>Contact</p>
                     <p><a class="link-opacity-100" href="#">General Enquiries</a></p>
                     <p><a class="link-opacity-100" href="#">Employment</a><br><br><br><br><br></p>
