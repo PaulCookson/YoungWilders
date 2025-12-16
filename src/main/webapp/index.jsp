@@ -109,6 +109,7 @@
                 renderID(contentfulClient, '5H6xbZFo4zJXfhmTIEeyLL',$('#content'), basicRenderer);
                 
 
+                getAssets(contentfulClient);
 
             }
 

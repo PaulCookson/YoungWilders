@@ -136,4 +136,20 @@ function renderArray(list)
     return list.join("<br>");
 
 }
+
+function getAssets(client)
+{
+    client.getEntries(
+                {
+                    //'metadata.tags.sys.id[all]': 'Home Page'}
+                'metadata.tags[exists]': true
+            })
+                .then(function (entries) {
+                    console.log(entries);
+                })
+                .catch(console.error);
+    
+    
+}
+
             

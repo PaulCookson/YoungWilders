@@ -93,9 +93,9 @@
 
 
             }
-            function renderCarousel(image) {
+            function renderCarousel(image, index) {
                 if (image && image.fields.file) {
-                    return '<div class="carousel-item active"><img class="d-block w-100" src="' + image.fields.file.url + '" alt="First slide"></div>';
+                    return '<div class="carousel-item ' + (index==0 ? "active" : "") + '"><img class="d-block w-100" src="' + image.fields.file.url + '" alt="First slide"></div>';
             
                             
                 } else {
@@ -124,7 +124,7 @@
                 // Moved this line up here
                 this.map = new google.maps.Map(document.getElementById('map'), mapOptions); // changed the "native element" to a standard DOM element for the sake of this example
 
-                var infowindow = new google.maps.InfoWindow({maxWidth: 400,headerDisabled: true });
+                var infowindow = new google.maps.InfoWindow({maxWidth: 440,headerDisabled: false });
 
                 var marker, i;
 
@@ -133,12 +133,14 @@
                         position: new google.maps.LatLng(data[i].fields.lattitude, data[i].fields.longitude),
                         map: this.map // You are using this.map here so it needs to be created before
                     });
-                    var images;
-                    if(data[i].fields.projectImages && data[i].fields.projectImages.map)
-                        images = data[i].fields.projectImages.map(renderCarousel).join();        
-                
+                    
+                   
                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
                         return function () {
+                            var images;
+                            if(data[i].fields.projectImages && data[i].fields.projectImages.map)
+                                images = data[i].fields.projectImages.map(renderCarousel).join();        
+                
                             infowindow.setContent('<h1>' + data[i].fields.projectName + '</h1>'
                                 + '<div id="infoCarousel" class="carousel slide" data-ride="carousel">' +
   '<div class="carousel-inner">' + images + 
@@ -165,25 +167,7 @@
 
 
 
-            function csvToArr(stringValue) {
-                const formattedString = stringValue.trim().replace('\r', '').split('\n');
-
-                const [keys, ...rest] = stringValue.trim().split('\n').map((item) => item.split(','));
-
-
-                console.log('CSV keys: ', keys);
-                console.log('CSV values: ', rest);
-
-                const formedArr = rest.map((item) => {
-                    const object = {};
-                    keys.forEach((key, index) => (object[key] = item.at(index)));
-                    return object;
-                });
-
-                return formedArr;
-
-
-            }
+            
 
 
             function doSomethingWithData(data) {

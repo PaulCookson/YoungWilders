@@ -178,7 +178,7 @@ body{
     height: 100%;
 }
 
-//#infoCarousel img {height:200px};
+#infoCarousel {margin-bottom:10px};
 //.gm-style img {width:}
 //.gm-style-iw-chr > button {display: none;}
 
