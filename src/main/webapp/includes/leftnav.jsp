@@ -37,15 +37,15 @@
                     <p>Opportunities</p>    
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=other">Vacancies</a></p>
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=wild steward">Wild Stewards</a></p>
-                    <p><a class="link-opacity-100" href="donate.jsp">Donate</a></p>
+                    
                     <p>Research & Reports</p>
                     <p><a class="link-opacity-100" href="annualreport.jsp">Annual reports</a></p>
                     <p><a class="link-opacity-100" href="scrapbook.jsp">Scrapbook</a></p>
                     <p>Contact</p>
-                    <p><a class="link-opacity-100" href="#">General Enquiries</a></p>
-                    <p><a class="link-opacity-100" href="#">Employment</a><br><br><br><br><br></p>
-                    
-                    
+                    <p><a class="link-opacity-100" href="enquires.jsp">General Enquiries</a></p>
+                    <br>
+                     <p><a class="link-opacity-100" href="donate.jsp">DONATE</a></p>
+                     <br>
                
                 
                     <a href="./index.jsp "><img width="100px" src='assets/logo.png'></a>

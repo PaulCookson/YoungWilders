@@ -137,14 +137,17 @@ function renderArray(list)
 
 }
 
-function getAssets(client)
+function renderAssets(client, container, renderer)
 {
-    client.getEntries(
+    client.getAssets(
                 {
-                    //'metadata.tags.sys.id[all]': 'Home Page'}
-                'metadata.tags[exists]': true
+                'metadata.tags.sys.id[all]': 'homeSection'
+                
             })
                 .then(function (entries) {
+                    
+                    
+                    container.html(renderer(entries.items));
                     console.log(entries);
                 })
                 .catch(console.error);

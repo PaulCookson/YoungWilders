@@ -13,61 +13,148 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 body{
 
     background: #000000;
-    
+
 }
-#menu {background: #f5edd6}
+#menu {
+    background: #f5edd6
+}
 
 
-.button_group{margin-left:30px;margin-top:30px;}
+.button_group{
+    margin-left:30px;
+    margin-top:30px;
+}
 
-#centre-content{padding-left:0px;padding-right:0px; padding-bottom:30px;padding-bottom:30px;}
-#right-content{min-height: 600px}
+#centre-content{
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom:30px;
+    padding-bottom:30px;
+}
+#right-content{
+    min-height: 600px;
+    background-color:#f5edd6;
+}
 
-#centre-content p {font-size:1.2rem;line-height:25px;margin:25px 30px 0px 30px }
-#right-content p {margin-left:30px;margin-top:30px;margin-right:30px}
-#right-content h1 {font-size:1.2rem}
+#centre-content p {
+    font-size:1.2rem;
+    line-height:25px;
+    margin:25px 30px 0px 30px
+}
+#right-content p {
+    margin-left:30px;
+    margin-top:30px;
+    margin-right:30px
+}
+#right-content h1 {
+    font-size:1.2rem
+}
 
-.yw_menu {margin-left:30px}
+.yw_menu {
+    margin-left:30px
+}
 
-#menu .btn {width:120px;height:30px;
-            margin-top:20px;
-            margin-right:30px;
-            margin-bottom:0px;}
-#menu .btn-first {width:120px;height:30px;}
+#menu .btn {
+    width:120px;
+    height:30px;
+    margin-top:20px;
+    margin-right:30px;
+    margin-bottom:0px;
+}
+#menu .btn-first {
+    width:120px;
+    height:30px;
+}
 
-#second-menu {margin-top:30px}
-#second-menu p {margin-bottom:5px;font-weight:700;text-transform: uppercase;}
-#second-menu p a{text-decoration:none;font-weight:normal;color:black;text-transform: none;}
+#second-menu {
+    margin-top:30px
+}
+#second-menu p {
+    margin-bottom:5px;
+    font-weight:700;
+    text-transform: uppercase;
+}
+#second-menu p a{
+    text-decoration:none;
+    font-weight:normal;
+    color:black;
+    text-transform: none;
+}
 
-#involved #right-content, #aboutus #right-content,#vacancy #right-content,#programme #right-content,#proj #right-content,#involved #right-content {background: #f5edd6}
+#involved #right-content, #aboutus #right-content,#vacancy #right-content,#programme #right-content,#proj #right-content,#involved #right-content {
+    background: #f5edd6
+}
 
-#aboutus #centre-content {background: #847DAC;}
-#programme #centre-content {background:#765757}
-#involved #centre-content {background:#9B5C99}
+#aboutus #centre-content {
+    background: #847DAC;
+}
+#programme #centre-content {
+    background:#765757
+}
+#involved #centre-content {
+    background:#9B5C99
+}
 
-#programmes {margin-left:10px}
-.programme-item-col {padding:0px}
-.programme-item-detail {padding:0px; margin-bottom:10px}
-.programme-item-detail img {width:100%}
+#programmes {
+    margin-left:10px
+}
+.programme-item-col {
+    padding:0px
+}
+.programme-item-detail {
+    padding:0px;
+    margin-bottom:10px
+}
+.programme-item-detail img {
+    width:100%
+}
 
-#right-content #projects p{text-transform:uppercase;margin-bottom:5px} 
-#proj #right-content #projects p a{text-transform:uppercase;} 
+#right-content #projects p{
+    text-transform:uppercase;
+    margin-bottom:5px
+}
+#proj #right-content #projects p a{
+    text-transform:uppercase;
+}
 
-#projectdetail img {width:100%}
+#projectdetail img {
+    width:100%
+}
 
-#projectdetailmap {margin-bottom:10px}
-#projectdetail table td {text-align:left;vertical-align:top}
+#projectdetailmap {
+    margin-bottom:10px
+}
+#projectdetail table td {
+    text-align:left;
+    vertical-align:top
+}
 
-#projectdetail #projectImages img {margin-top:10px};
+#projectdetail #projectImages img {
+    margin-top:10px
+}
+;
 
-#right-content div.colleague-details p {text-transform:uppercase;font-size:1rem;margin-top:20px}
-#right-content div.colleague-details h3 {text-transform:uppercase;font-size:1.2rem;margin-top:20px}
-#right-content div.colleague-info p {text-transform:none;font-size:0.8rem}
+#right-content div.colleague-details p {
+    text-transform:uppercase;
+    font-size:1rem;
+    margin-top:20px
+}
+#right-content div.colleague-details h3 {
+    text-transform:uppercase;
+    font-size:1.2rem;
+    margin-top:20px
+}
+#right-content div.colleague-info p {
+    text-transform:none;
+    font-size:0.8rem
+}
 .colleague-image img {
-  width: 100%;
+    width: 100%;
 }
 
-.colleague {margin-top:30px}
+.colleague {
+    margin-top:30px
+}
 #proj #right-content p a {
     text-decoration: none;
     font-weight: normal;
@@ -75,18 +162,23 @@ body{
     text-transform: none;
 }
 #proj #right-content table tr td:first-child {
-  padding-right: 5px;
-} 
-
-#scrap #full-content div {
-    background: #FF0000;
-}
-#scrap #full-content div:nth-of-type(odd) {
-    background: #e0e0e0;
+    padding-right: 5px;
 }
 
-#right-content p{ margin:0px 0px 0px 0px}
-#vacancy #right-content p{ margin:30px 30px 30px 30px;font-size:0.8rem}
+/*#scrap #full-content div {
+//    background: #FF0000;
+//}
+//#scrap #full-content div:nth-of-type(odd) {
+//    background: #e0e0e0;
+//}
+*/
+#right-content p{
+    margin:0px 0px 0px 0px
+}
+#vacancy #right-content p{
+    margin:30px 30px 30px 30px;
+    font-size:0.8rem
+}
 .btn-general
 {
     background-color: #D9D9D9;
@@ -132,74 +224,92 @@ body{
 
     background-color: #765757;
 }
-.image-first
+.homeimage
 {
-    width:280px;
     margin:10px 10px 10px 10px;
 }
-.image-second
+.image0 img
+{
+    width:280px;
+
+}
+.image1 img
 {
     width:260px;
-    margin:10px 10px 10px 10px;
+
 }
-.image-third
+.image2 img
 {
     width:150px;
-    margin:10px 10px 10px 10px;
+
 }
-.image-forth
+.image3 img
 {
     width:280px;
-    margin:10px 10px 10px 10px;
+
 }
-.image-fifth
+.image4 img
 {
     width:290px;
-    margin:10px 10px 10px 10px;
+
 }
 
-.image-sixth
+.image5 img
 {
     width:170px;
-    margin:10px 10px 10px 10px;
+
 }
-.image-seventh
+.image6 img
 {
     width:170px;
-    margin:10px 10px 10px 10px;
+
 }
-.image-eigth
+.image7 img
 {
     width:120px;
-    margin:10px 10px 10px 10px;
+
 }
 
 #map {
     height: 100%;
 }
 
-#infoCarousel {margin-bottom:10px};
+#infoCarousel {
+    margin-bottom:10px
+}
+;
 //.gm-style img {width:}
 //.gm-style-iw-chr > button {display: none;}
+.gm-style .gm-style-iw-c  {background-color: #f5edd6}
+
+.gm-style p, .gm-style h1
+{
+    font-family: MaaxMono, Arial, Helvetica, sans-serif;
+}
 
 
 .programme-item-col
 {
     border-top:1px solid #000000;
-    
+
 }
 @media (max-width: 1200px) {
-    .yw_menu {margin-left:10px}
+    .yw_menu {
+        margin-left:10px
+    }
 }
 
 
 
 @media (max-width: 576px) {
-    #right-content 
+    #right-content
     {
-        margin-left:5px;margin-right:5px;
+        margin-left:5px;
+        margin-right:5px;
     }
-    #centre-content .button_group{margin-bottom:20px}
+    #centre-content .button_group{
+        margin-bottom:20px
+    }
 }
 
 

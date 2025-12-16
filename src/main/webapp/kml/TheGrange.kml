@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>The Grange</name>
+    <description/>
+    <Style id="poly-FFD600-5201-77-nodesc-normal">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>5.201</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-FFD600-5201-77-nodesc-highlight">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>7.8015</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-FFD600-5201-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-FFD600-5201-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-FFD600-5201-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Boundary</name>
+      <Placemark>
+        <name>Polygon 1</name>
+        <styleUrl>#poly-FFD600-5201-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -2.8424107,51.843981,0
+                -2.8427004,51.8452139,0
+                -2.8402113,51.8458767,0
+                -2.8437733,51.8476662,0
+                -2.8447174,51.8473083,0
+                -2.845683,51.8472818,0
+                -2.8465306,51.8445974,0
+                -2.8465091,51.8443721,0
+                -2.8461765,51.8436894,0
+                -2.8455006,51.843232,0
+                -2.8424107,51.843981,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

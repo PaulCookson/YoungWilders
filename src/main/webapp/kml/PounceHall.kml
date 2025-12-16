@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Pounce Hall</name>
+    <description/>
+    <Style id="poly-FFD600-5501-77-normal">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>5.501</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-FFD600-5501-77-highlight">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>8.2515</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-FFD600-5501-77">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-FFD600-5501-77-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-FFD600-5501-77-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Boundary</name>
+      <Placemark>
+        <name>Polygon 1</name>
+        <description>Pounce Hall</description>
+        <styleUrl>#poly-FFD600-5501-77</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                0.2688914,52.022294,0
+                0.269106,52.0219573,0
+                0.2707904,52.0214226,0
+                0.2721744,52.0208416,0
+                0.2728074,52.0207623,0
+                0.2758222,52.0210991,0
+                0.2761441,52.021033,0
+                0.2762943,52.0213763,0
+                0.277174,52.0217989,0
+                0.2782898,52.0216338,0
+                0.2785581,52.0232843,0
+                0.277056,52.0235286,0
+                0.2766483,52.0221818,0
+                0.2743738,52.0217791,0
+                0.2688914,52.022294,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

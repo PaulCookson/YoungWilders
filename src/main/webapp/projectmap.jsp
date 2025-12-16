@@ -70,6 +70,11 @@
                 const {Map} = await google.maps.importLibrary("maps");
                 const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
 
+                $('.carousel').carousel({
+                    interval: 2000
+                })
+
+
                 // The map, centered at Uluru
                 map = new Map(document.getElementById("map"), {
                     zoom: 5,
@@ -146,14 +151,14 @@
   '<div class="carousel-inner">' + images + 
     
   '</div>' +
-  '<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">' +
+  '<button class="carousel-control-prev" type="button" data-bs-target="#infoCarousel" data-bs-slide="prev">' +
     '<span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
-    
-  '</a>' +
-  '<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">' +
+    '<span class="visually-hidden">&lt;</span>' +
+  '</button>' +
+  '<button class="carousel-control-next" type="button" data-bs-target="#infoCarousel" data-bs-slide="next">' +
     '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
-    
-  '</a>' +
+    '<span class="visually-hidden">&gt;</span>' +
+  '</button>' +
 '</div>' +    
                                  documentToHtmlString(data[i].fields.popUp) );
                             infowindow.open(Map, marker);

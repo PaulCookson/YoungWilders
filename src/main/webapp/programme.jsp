@@ -57,7 +57,7 @@
                 var fields = programme.fields
                 return '<li class="programme-item">' +
                         '<div class="row">' +
-                            '<div class="programme-item-col col-md-6 col-sm-8 col-8" >' + 
+                            '<div class="programme-title programme-item-col col-md-6 col-sm-8 col-8" >' + 
                                 fields.programmeName + 
                                 
                             '</div>' +
@@ -116,6 +116,29 @@
                                 </c:choose>
                 
                 
+               
+
+                var elements = document.getElementsByClassName("programme-item-detail");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].addEventListener('hidden.bs.collapse', function (element) {
+                        
+                        var li = $(this).closest("li");
+                        
+                        li.find('.programme-title').css('font-weight', 'normal');
+                        
+                    });
+                    elements[i].addEventListener('shown.bs.collapse', function (element) {
+                        
+                        var li = $(this).closest("li");
+                        
+                        li.find('.programme-title').css('font-weight', 'bold');
+                        
+                    });
+  // do something...
+                }               
+                
+                
+
 
             }
             

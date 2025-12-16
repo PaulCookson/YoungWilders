@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Castle Howard</name>
+    <description/>
+    <Style id="poly-FFD600-6001-77-nodesc-normal">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>6.001</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-FFD600-6001-77-nodesc-highlight">
+      <LineStyle>
+        <color>ff00d6ff</color>
+        <width>9.0015</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4d00d6ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-FFD600-6001-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-FFD600-6001-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-FFD600-6001-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Boundary</name>
+      <Placemark>
+        <name>Polygon 1</name>
+        <styleUrl>#poly-FFD600-6001-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -0.9026394,54.1258424,0
+                -0.9017811,54.1257167,0
+                -0.8993779,54.126622,0
+                -0.8978329,54.1265466,0
+                -0.8955584,54.1267729,0
+                -0.8968029,54.1276279,0
+                -0.897275,54.1284578,0
+                -0.8978329,54.1288853,0
+                -0.8982191,54.1293128,0
+                -0.9001503,54.1295391,0
+                -0.9030686,54.1295643,0
+                -0.9045706,54.1298409,0
+                -0.906888,54.1297403,0
+                -0.9026394,54.1258424,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
