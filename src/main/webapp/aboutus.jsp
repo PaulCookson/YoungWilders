@@ -10,7 +10,7 @@
         
     </head>
     <body id="aboutus">
-
+        <%@include  file="includes/google.jsp" %> 
         <div class="container">
             <div class="row">
                 
@@ -60,10 +60,10 @@
 
                 PRODUCT_CONTENT_TYPE_ID = 'colleague';
 
-                container = $('#colleagues'); 
+
 
                 renderID(contentfulClient, '48Q8v5h7UAwXnkV0qtbJJ2',$('#content'), basicRenderer);
-                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','fields.ranking', renderColleagues)
+                renderContent(contentfulClient,$('#colleagues'), PRODUCT_CONTENT_TYPE_ID, 'colleagueType','${empty param.colleagueType ? 'Core' : param.colleagueType}','fields.ranking', renderColleagues)
 
 
             }

@@ -5,7 +5,7 @@
         <%@include  file="includes/head.jsp" %>
     </head>
     <body id="vacancy">
-
+        <%@include  file="includes/google.jsp" %> 
         <div class="container">
             <div class="row">
 
@@ -17,11 +17,7 @@
                     </div>
 
 
-                    <div class="button_group" >
-                        <a type="button" class="btn btn-general" href="vacancies.jsp">Visual Lead</a>
-                        <a type="button" class="btn btn-general" href="vacancies.jsp?type=wild%20steward">Wild Stewards</a>
-
-                    </div>     
+                    
 
                 </div>
                 <div id="right-content" class="col-lg-6">

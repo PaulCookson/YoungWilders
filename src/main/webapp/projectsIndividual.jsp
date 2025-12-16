@@ -5,7 +5,7 @@
         <%@include  file="includes/head.jsp" %>
     </head>
     <body>
-        
+        <%@include  file="includes/google.jsp" %> 
         <div class="container">
             <div class="row">
         

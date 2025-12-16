@@ -5,7 +5,7 @@
         <%@include  file="includes/head.jsp" %>
     </head>
     <body id="programme">
-
+<%@include  file="includes/google.jsp" %> 
         <div class="container">
             <div class="row">
 
@@ -99,7 +99,7 @@
 
                 PRODUCT_CONTENT_TYPE_ID = 'programme';
 
-                container = $('#programmes'); 
+                
 
                 renderID(contentfulClient, '6CwmRW9EJ4HWhVflhk0Iay',$('#content'), basicRenderer);
                 var now = new Date();
@@ -108,10 +108,10 @@
                 //console.debug(todayUTC.toISOString());
                                 <c:choose>
                                     <c:when test="${param.date eq 'past'}">
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'-fields.programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient,$('#programmes'), PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[lte]",gt,'-fields.programmeStartDate', renderProgrammes)
                                     </c:when>
                                     <c:otherwise>
-                                        renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'-fields.programmeStartDate', renderProgrammes)
+                                        renderContent(contentfulClient,$('#programmes'), PRODUCT_CONTENT_TYPE_ID, "programmeStartDate[gte]",gt,'-fields.programmeStartDate', renderProgrammes)
                                     </c:otherwise>
                                 </c:choose>
                 

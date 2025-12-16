@@ -36,13 +36,13 @@
                     
                     <p>Opportunities</p>    
                     <p><a class="link-opacity-100" href="vacancies.jsp?type=other">Vacancies</a></p>
-                    <p><a class="link-opacity-100" href="vacancies.jsp?type=wild steward">Wild Stewards</a></p>
+                    
                     
                     <p>Research & Reports</p>
                     <p><a class="link-opacity-100" href="annualreport.jsp">Annual reports</a></p>
                     <p><a class="link-opacity-100" href="scrapbook.jsp">Scrapbook</a></p>
                     <p>Contact</p>
-                    <p><a class="link-opacity-100" href="enquires.jsp">General Enquiries</a></p>
+                    <p><a class="link-opacity-100" href="enquiries.jsp">General Enquiries</a></p>
                     <br>
                      <p><a class="link-opacity-100" href="donate.jsp">DONATE</a></p>
                      <br>

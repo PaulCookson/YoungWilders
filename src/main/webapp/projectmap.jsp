@@ -5,7 +5,7 @@
         <%@include  file="includes/head.jsp" %>
     </head>
     <body id="proj">
-
+<%@include  file="includes/google.jsp" %> 
         <div class="container">
             <div class="row">
 
@@ -86,13 +86,12 @@
                contentfulClient = getClient(contentful);
                 PRODUCT_CONTENT_TYPE_ID = 'project';
 
-                container = $('#projects');
+                
 
 
 
 
-
-                renderContent(contentfulClient, PRODUCT_CONTENT_TYPE_ID, null, null, null, renderProjects)
+                renderContent(contentfulClient,$('#projects'), PRODUCT_CONTENT_TYPE_ID, null, null, null, renderProjects)
 
                 renderID(contentfulClient, '74IVrpw1ZyaXW9QmJ5DgtC',$('#content'), basicRenderer);
 

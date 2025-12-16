@@ -74,7 +74,7 @@ function getWithExpiry(key) {
     }
     return item.value;
 }
-function renderContent(client, contenttype, queryfield, queryvalue, order, renderer)
+function renderContent(client, container,contenttype, queryfield, queryvalue, order, renderer)
 {
 
     const query = {};
