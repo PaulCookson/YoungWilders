@@ -48,7 +48,9 @@
                      <br>
                
                 
-                    <a href="./index.jsp "><img width="100px" src='assets/logo.png'></a>
+                     <a href="./index.jsp "><img width="100px" src='assets/logo.png'></a><br>
+                        <a data-testid="linkElement" href="https://www.instagram.com/youngwilders_/?hl=en" target="_blank">
+                            <i class="bi bi-instagram" style="color:black"></i></a>
             </div>
 	    	    </div>
       </div>

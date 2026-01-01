@@ -94,7 +94,17 @@ body{
 #involved #centre-content {
     background:#9B5C99
 }
-
+#donate #centre-content h1{
+    font-size:1.2rem;font-weight:bold;margin-left:30px;margin-top:10px
+}
+#donate #right-content a
+{
+   text-decoration: none
+}
+#donate #right-content span
+{
+   color:white;
+}
 #programmes {
     margin-left:10px
 }
@@ -227,46 +237,87 @@ body{
 .homeimage
 {
     margin:10px 10px 10px 10px;
+  float: left;
+
+  padding: 5px;
+
 }
-.image0 img
+
+#seedcontainer
+{
+    position:relative;
+}
+
+div .seed
+{
+    position:absolute;
+}
+div .seed img
+{
+    width:40px
+}
+#seed1 
+{
+ 
+}
+#seed2 img
+{
+    width:30px;
+}
+
+#seed8 img
+{
+    width:60px
+ 
+}
+.row0 .col0 img
 {
     width:280px;
 
 }
-.image1 img
+.row0 .col1 img
 {
     width:260px;
 
 }
-.image2 img
+.row1 .col0 
 {
-    width:150px;
+    width:200px;
+    margin-left:30px;
+}
+.row1 .col0 img
+{
+    width:210px;
 
 }
-.image3 img
+.row1 .col1 img
 {
-    width:280px;
+    width:350px;
 
 }
-.image4 img
+.row2 .col0 img
 {
-    width:290px;
+    width:320px;
 
 }
 
-.image5 img
+.row2 .col1 img
 {
     width:170px;
 
 }
-.image6 img
+.row2 .col2 img
 {
     width:170px;
 
 }
-.image7 img
+.row3 .col0
 {
-    width:120px;
+     margin-left:40px;
+}
+.row3 .col0 img
+{
+    width:400px;
 
 }
 
@@ -278,8 +329,7 @@ body{
     margin-bottom:10px
 }
 ;
-//.gm-style img {width:}
-//.gm-style-iw-chr > button {display: none;}
+
 .gm-style .gm-style-iw-c  {background-color: #f5edd6}
 
 .gm-style p, .gm-style h1
@@ -288,7 +338,7 @@ body{
 }
 
 
-.programme-item-col
+.programme-item-col,.vacancy-item-col
 {
     border-top:1px solid #000000;
 

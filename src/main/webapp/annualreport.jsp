@@ -17,9 +17,20 @@
                 <div id="content_sub">
                     
                 </div>
-                    
-                <a href="javascript:renderID(contentfulClient, 'WQRV0feebQwFPEzv4WpZs',$('#right-content'), renderReport)">Annual Report 2025</a><br>
-                <a href="javascript:renderID(contentfulClient, '4yLvtibGkFZLJK5gfoN9rz',$('#right-content'), renderReport)">Annual Report 2024</a>
+                
+                 <div class="button_group" >
+                        
+                    <a type="button" class="btn btn-general" href="javascript:renderID(contentfulClient, 'WQRV0feebQwFPEzv4WpZs',$('#right-content'), renderReport)">Annual Report 2025</a>
+                        
+                     
+                    <a type="button" class="btn btn-general" href="javascript:renderID(contentfulClient, '4yLvtibGkFZLJK5gfoN9rz',$('#right-content'), renderReport)">Annual Report 2024</a>   
+                        
+
+                 </div>     
+
+                
+                
+                
                 
             </div>
                   

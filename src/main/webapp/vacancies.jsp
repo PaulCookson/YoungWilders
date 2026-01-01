@@ -68,12 +68,12 @@
             {
                  return '' + '<li>' + 
                     '<div class="row">' +
-                            '<div class="vacancy-title vacancy-item-col col-md-6 col-sm-8 col-8" >' + 
+                            '<div class="vacancy-title vacancy-item-col col-md-8 col-sm-8 col-8" >' + 
                                 vacancy.fields.jobTitle + 
                                 
                             '</div>' +
                             
-                            '<div class="vacancy-item-col col-md-3 col-sm-4 col-4" >' +
+                            '<div class="vacancy-item-col col-md-4 col-sm-4 col-4" >' +
                                  '<div class="row">' +
                                     '<div data-bs-toggle="collapse" class="col-md-4 col-sm-4 col-4 question collapsed" href="#faq' + index + '"  aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
                                  '</div>' + 

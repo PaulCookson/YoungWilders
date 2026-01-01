@@ -74,7 +74,7 @@ function getWithExpiry(key) {
     }
     return item.value;
 }
-function renderContent(client, container,contenttype, queryfield, queryvalue, order, renderer)
+function renderContent(client, container,contenttype, queryfield, queryvalue, order, renderer, completed)
 {
 
     const query = {};
@@ -91,7 +91,12 @@ function renderContent(client, container,contenttype, queryfield, queryvalue, or
     entries = getWithExpiry(JSON.stringify(query));
 
     if (entries)
+    {
         container.html(renderer(entries.items));
+        if(completed)
+                        completed();
+    }
+    
     else
     {
         client.getEntries(
@@ -103,6 +108,8 @@ function renderContent(client, container,contenttype, queryfield, queryvalue, or
                 .then(function (entries) {
                     setWithExpiry(JSON.stringify(query), entries, CACHELENGTH);
                     container.html(renderer(entries.items));
+                    if(completed)
+                        completed();
                 });
     }
 
@@ -121,15 +128,22 @@ function getClient(contentful)
     });
 
 }
-function renderImage(image) {
+function renderImage(image, classes='') {
     if (image && image.fields && image.fields.file) {
-        return '<img src="' + image.fields.file.url + '"   />';
+        return '<img ' + (classes ?'class="' + classes + '"': '')  + ' src="' + image.fields.file.url + '" alt="a"   />';
 
     } else {
         return '';
     }
 }
+function renderImage(image, classes='') {
+    if (image && image.fields && image.fields.file) {
+        return '<img ' + (classes ?'class="' + classes + '"': '')  + ' src="' + image.fields.file.url + '" alt="a"   />';
 
+    } else {
+        return '';
+    }
+}
 function renderArray(list)
 {
 
@@ -137,7 +151,7 @@ function renderArray(list)
 
 }
 
-function renderAssets(client, container, renderer)
+function renderAssets(client, container, renderer, completed)
 {
     client.getAssets(
                 {
@@ -148,7 +162,8 @@ function renderAssets(client, container, renderer)
                     
                     
                     container.html(renderer(entries.items));
-                    console.log(entries);
+                    if(completed)
+                        completed();
                 })
                 .catch(console.error);
     
