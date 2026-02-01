@@ -17,4 +17,94 @@
         </session-timeout>
     </session-config>
 
+<servlet>
+  <servlet-name>vacancies</servlet-name>
+  <jsp-file>/vacancies.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>vacancies</servlet-name>
+  <url-pattern>/vacancies</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>projects</servlet-name>
+  <jsp-file>/projects.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>projects</servlet-name>
+  <url-pattern>/projects</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>aboutus</servlet-name>
+  <jsp-file>/aboutus.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>aboutus</servlet-name>
+  <url-pattern>/aboutus</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>programme</servlet-name>
+  <jsp-file>/programme.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>programme</servlet-name>
+  <url-pattern>/programme</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>involved</servlet-name>
+  <jsp-file>/involved.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>involved</servlet-name>
+  <url-pattern>/involved</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>projectmap</servlet-name>
+  <jsp-file>/projectmap.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>projectmap</servlet-name>
+  <url-pattern>/projectmap</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>scrapbook</servlet-name>
+  <jsp-file>/scrapbook.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>scrapbook</servlet-name>
+  <url-pattern>/scrapbook</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>enquiries</servlet-name>
+  <jsp-file>/enquiries.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>enquiries</servlet-name>
+  <url-pattern>/enquiries</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>donate</servlet-name>
+  <jsp-file>/donate.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>donate</servlet-name>
+  <url-pattern>/donate</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>annualreport</servlet-name>
+  <jsp-file>/annualreport.jsp</jsp-file>
+</servlet>
+                                                                                                               
+<servlet-mapping>
+  <servlet-name>annualreport</servlet-name>
+  <url-pattern>/annualreport</url-pattern>
+</servlet-mapping>
 </web-app>

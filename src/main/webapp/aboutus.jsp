@@ -11,7 +11,8 @@
     </head>
     <body id="aboutus">
         <%@include  file="includes/google.jsp" %> 
-        <div class="container">
+        <%@include  file="includes/container.jsp" %>
+        
             <div class="row">
                 
                     <%@include  file="includes/leftnav.jsp" %>
@@ -22,9 +23,9 @@
                     </div>
                     
                     <div class="button_group" >
-                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Core">Core Team</a>
-                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Collaborator">Wild Stewards</a>
-                    <a type="button" class="btn btn-general" href="aboutus.jsp?colleagueType=Advisor">Advisors</a>
+                    <a type="button" class="btn btn-general" href="aboutus?colleagueType=Core">Core Team</a>
+                    <a type="button" class="btn btn-general" href="aboutus?colleagueType=Collaborator">Wild Stewards</a>
+                    <a type="button" class="btn btn-general" href="aboutus?colleagueType=Advisor">Advisors</a>
                     </div>
                     
  

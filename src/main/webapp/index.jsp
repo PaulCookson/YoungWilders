@@ -6,7 +6,7 @@
     </head>
     <body id='home'>
         <%@include  file="includes/google.jsp" %> 
-        <div class="container">
+         <%@include  file="includes/container.jsp" %>
             <div class="row">
 
                 <%@include  file="includes/leftnav.jsp" %>
@@ -117,7 +117,7 @@
             }
             function renderSingleImage(asset, index)
             {
-                return '<div class="col homeimage  draggable col' + index + '">' + renderImage(asset, 'rounded') + '</div>';
+                return '<div class="col homeimage  draggable col' + index + '">' + renderImage(asset, '') + '</div>';
 
             }
 
@@ -135,24 +135,22 @@
                     css_property.rotate = rotate + "deg";
                 if ($("#seed" + index).length == 0)
                 {
-                    $('#right-content').append("<div id='seed" + index + "' class='seed'><img src='<c:url value="/assets/seeds/SEED"/>" + imagenum + ".png'></div>");
+                    $('#right-content').append("<div id='seed" + index + "' class='seed draggable' style='display:none'><img src='${pageContext.request.contextPath}/assets/seeds/SEED" + imagenum + ".png'></div>");
                 }
                 $("#seed" + index).css(css_property);
 
             }
             function rendered()
             {
-                $("#right-content div.draggable").draggable();
-
+                
+                
                 //$('#right-content').append("<div id='seedcontainer'></div>");
-                for (i = 1; i < 7; i++)
-                {
-                    //     $('#seedcontainer').append("<div id='seed" + i + "' class='seed'><img src='<c:url value="/assets/seeds/SEED"/>" + i + ".png'></div>");
-
-                }
+                
 
 
                 redrawSeeds();
+		$("#right-content div.draggable").draggable();
+		$("#right-content div.seed").show();
 
             }
             function renderImages(assets)

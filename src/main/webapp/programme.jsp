@@ -6,7 +6,7 @@
     </head>
     <body id="programme">
 <%@include  file="includes/google.jsp" %> 
-        <div class="container">
+         <%@include  file="includes/container.jsp" %>
             <div class="row">
 
                 <%@include  file="includes/leftnav.jsp" %>
@@ -17,8 +17,8 @@
                     
                     </div>
                     <div class="button_group">
-                        <a type="button" class="btn btn-general" href="programme.jsp?date=upcoming">Upcoming</a>
-                        <a type="button" class="btn btn-general" href="programme.jsp?date=past">Past</a>
+                        <a type="button" class="btn btn-general" href="programme?date=upcoming">Upcoming</a>
+                        <a type="button" class="btn btn-general" href="programme?date=past">Past</a>
                     </div>
                 </div>
                 <div id="right-content" class="col-lg-6">
@@ -66,11 +66,15 @@
                                 fields.programmeLocation +
                                 
                             '</div>' +
-                            '<div class="programme-item-col col-md-3 col-sm-4 col-4" >' +
-                                 '<div class="row">' +
-                                    '<div class="col-md-8 col-sm-8 col-8">' + new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb') + '</div>' + 
-                                    '<div data-bs-toggle="collapse" class="col-md-4 col-sm-4 col-4 question collapsed" href="#faq' + index + '"  aria-expanded="false">+<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>' +
-                                 '</div>' + 
+                            '<div class="programme-item-col col-md-2 col-sm-3 col-3" >' +
+                                     new Date(Date.parse(fields.programmeStartDate)).toLocaleDateString('en-gb')  + 
+                                    
+                     
+                            '</div>' +
+                            '<div class="programme-item-col col-md-1 col-sm-1 col-1" >' +
+                                   
+                                    '<div data-bs-toggle="collapse" class="question collapsed" href="#faq' + index + '"  aria-expanded="false">+</div>' +
+                     
                             '</div>' +
 
                             

@@ -15,7 +15,7 @@
 </script>
 
 <meta name="author" content="" />
-<title>Youngwilders</title>
+<title>Youngwilders | Youth-led nature recovery in the UK</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
@@ -24,7 +24,7 @@
 <link href="css/yw.css" rel="stylesheet" />
 <script nonce="" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script nonce="" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
 
 <script
       src="https://cdn.jsdelivr.net/npm/contentful@7.0.5/dist/contentful.browser.min.js"

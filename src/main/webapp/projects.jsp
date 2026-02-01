@@ -5,7 +5,7 @@
     </head>
     <body id="proj">
 <%@include  file="includes/google.jsp" %> 
-        <div class="container">
+         <%@include  file="includes/container.jsp" %>
             <div class="row">
 
                 <%@include  file="includes/leftnav.jsp" %>
@@ -15,8 +15,8 @@
                     
                     </div>
                     <div class="button_group" >
-                        <a type="button" class="btn btn-general" href="projects.jsp">List View</a>
-                        <a type="button" class="btn btn-general" href="projectmap.jsp">Map View</a>
+                        <a type="button" class="btn btn-general" href="projects">List View</a>
+                        <a type="button" class="btn btn-general" href="projectmap">Map View</a>
 
                     </div>           
                 </div>

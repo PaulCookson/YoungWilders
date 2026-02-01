@@ -23,10 +23,10 @@
             <div class="row" >
 
 	    <div class="list-group yw_menu">
-                    <a class="btn btn-first" href="projects.jsp">Projects</a>
-                    <a class="btn btn-second" href="programme.jsp">Programme</a>
-                    <a class="btn btn-third" href="involved.jsp">Get Involved</a>
-                    <a class="btn btn-forth" href="aboutus.jsp">About Us</a>
+                    <a class="btn btn-first" href="projectmap">Projects</a>
+                    <a class="btn btn-second" href="programme">Programme</a>
+                    <a class="btn btn-third" href="involved">Get Involved</a>
+                    <a class="btn btn-forth" href="aboutus">About Us</a>
                     
                 </div>
             
@@ -35,23 +35,27 @@
                 
                     
                     <p>Opportunities</p>    
-                    <p><a class="link-opacity-100" href="vacancies.jsp?type=other">Vacancies</a></p>
+                    <p><a class="link-opacity-100" href="vacancies?type=other">Vacancies</a></p>
                     
                     
                     <p>Research & Reports</p>
-                    <p><a class="link-opacity-100" href="annualreport.jsp">Annual reports</a></p>
-                    <p><a class="link-opacity-100" href="scrapbook.jsp">Scrapbook</a></p>
-                    <p>Contact</p>
-                    <p><a class="link-opacity-100" href="enquiries.jsp">General Enquiries</a></p>
+                    <p><a class="link-opacity-100" href="annualreport">Annual reports</a></p>
+                    <p><a class="link-opacity-100" href="scrapbook">Scrapbook</a></p>
+                    <p><a class="link-opacity-100" href="donate">DONATE</a></p>
+                    <%--<p><a class="link-opacity-100" href="enquiries">General Enquiries</a></p>--%>
                     <br>
-                     <p><a class="link-opacity-100" href="donate.jsp">DONATE</a></p>
+                     
                      <br>
-               
-                
-                     <a href="./index.jsp "><img width="100px" src='assets/logo.png'></a><br>
-                        <a data-testid="linkElement" href="https://www.instagram.com/youngwilders_/?hl=en" target="_blank">
+               <a data-testid="linkElement" href="https://www.instagram.com/youngwilders_/?hl=en" target="_blank">
                             <i class="bi bi-instagram" style="color:black"></i></a>
+                            <br>
+                
+                     
+                        
             </div>
+                    <div style="" >
+                    <a href="./index.jsp "><img style="width:80%;max-width:350px;margin-bottom:20px;" src='assets/logo.png' alt="logo"></a><br>
+                    </div>
 	    	    </div>
       </div>
     </div>

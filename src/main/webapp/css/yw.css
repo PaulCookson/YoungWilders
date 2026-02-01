@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 body{
 
     background: #000000;
+   overflow-x: hidden;
 
 }
 #menu {
@@ -41,11 +42,11 @@ body{
     line-height:25px;
     margin:25px 30px 0px 30px
 }
-#right-content p {
-    margin-left:30px;
-    margin-top:30px;
-    margin-right:30px
-}
+/*#right-content p {
+//    margin-left:30px;
+//    margin-top:30px;
+//    margin-right:30px
+*/
 #right-content h1 {
     font-size:1.2rem
 }
@@ -89,7 +90,8 @@ body{
     background: #847DAC;
 }
 #programme #centre-content {
-    background:#765757
+    background:#995F40
+        
 }
 #involved #centre-content {
     background:#9B5C99
@@ -118,12 +120,14 @@ body{
 .programme-item-detail img {
     width:100%
 }
+.programme-item .row {margin-top: 20px;}
 
-#right-content #projects p{
+
+#right-content #projects p ,#right-content #vacancies p{
     text-transform:uppercase;
     margin-bottom:5px
 }
-#proj #right-content #projects p a{
+#proj #right-content #projects p a,#vacancy #right-content #vacancies p a {
     text-transform:uppercase;
 }
 
@@ -165,7 +169,7 @@ body{
 .colleague {
     margin-top:30px
 }
-#proj #right-content p a {
+#proj #right-content p a,#vacancy #right-content p a {
     text-decoration: none;
     font-weight: normal;
     color: black;
@@ -186,7 +190,7 @@ body{
     margin:0px 0px 0px 0px
 }
 #vacancy #right-content p{
-    margin:30px 30px 30px 30px;
+    
     font-size:0.8rem
 }
 .btn-general
@@ -203,7 +207,7 @@ body{
 }
 .btn-second
 {
-    background-color: #765757;
+    background-color: #995F40;
     ;
     border-radius: 0 !important;
     border: 1px solid black;
@@ -232,7 +236,7 @@ body{
 .content-second
 {
 
-    background-color: #765757;
+    background-color: #995F40;
 }
 .homeimage
 {
@@ -329,6 +333,8 @@ div .seed img
     margin-bottom:10px
 }
 ;
+.gm-style .gm-style-iw-c  {background-color: #f5edd6}
+
 
 .gm-style .gm-style-iw-c  {background-color: #f5edd6}
 
@@ -337,6 +343,47 @@ div .seed img
     font-family: MaaxMono, Arial, Helvetica, sans-serif;
 }
 
+#scrap #right-content img 
+{
+    
+    width:100%
+}
+.scrapentry {
+    margin-top:30px;margin-bottom:30px;
+    
+}
+.scrapentry .col-12 h2 {
+    text-align: center   
+}
+.scrapentry .col-12 h2 {
+    text-align: center   
+}
+#right-content .scrapentry .col-12 li p {
+    text-align: left;
+    margin-top:0px;margin-bottom:0px;margin-left:0px;
+}
+#right-content .scrapentry .col-12 li {
+    
+    margin-left:50px;
+}
+#right-content .scrapentry .col-12 p:nth-child(1)  {
+    /*text-align: center;margin-left:50px;margin-right:50px;margin-top:20px;margin-bottom:20px;*/
+}
+#right-content .scrapentry .col-12 p {
+    text-align: left;margin-left:50px;margin-right:50px;margin-top:20px;margin-bottom:20px;
+    
+}
+#right-content .scrapentry .col-6 p {
+    text-align: left;margin-left:50px;margin-right:50px;margin-top:20px;margin-bottom:20px;
+    
+}
+#scrap #right-content .scrapentry img.embedded
+{
+    max-width:50%;
+    margin:auto;
+    width:50%;
+    display:block;
+}
 
 .programme-item-col,.vacancy-item-col
 {

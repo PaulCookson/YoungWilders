@@ -6,7 +6,7 @@
     </head>
     <body id="vacancy">
         <%@include  file="includes/google.jsp" %> 
-        <div class="container">
+         <%@include  file="includes/container.jsp" %>
             <div class="row">
 
                 <%@include  file="includes/leftnav.jsp" %>

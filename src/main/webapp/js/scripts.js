@@ -6,8 +6,8 @@
 // 
 // Scripts
 // 
-var CACHELENGTH=100000;
-
+//var CACHELENGTH=100000;
+var CACHELENGTH=100;
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -120,6 +120,12 @@ function basicRenderer(entry)
     return documentToHtmlString(entry.fields.pageContent)
 
 }
+function basicFieldRenderer(field, options)
+{
+
+    return documentToHtmlString(field,options)
+
+}
 function getClient(contentful)
 {
     return contentful.createClient({
@@ -130,20 +136,19 @@ function getClient(contentful)
 }
 function renderImage(image, classes='') {
     if (image && image.fields && image.fields.file) {
-        return '<img ' + (classes ?'class="' + classes + '"': '')  + ' src="' + image.fields.file.url + '" alt="a"   />';
+        
+        if(image.fields.file.contentType==='application/pdf')
+        {
+            return '<object data="' + image.fields.file.url + '" type="application/pdf" width="100%" height="100%" ><p>Your browser does not support PDFs. [Download the PDF](https://example.com/test.pdf) .</p> </object>'
+        }
+        else
+            return '<img ' + (classes ?'class="' + classes + '"': '')  + ' src="' + image.fields.file.url + '" alt="a"   />';
 
     } else {
         return '';
     }
 }
-function renderImage(image, classes='') {
-    if (image && image.fields && image.fields.file) {
-        return '<img ' + (classes ?'class="' + classes + '"': '')  + ' src="' + image.fields.file.url + '" alt="a"   />';
 
-    } else {
-        return '';
-    }
-}
 function renderArray(list)
 {
 
